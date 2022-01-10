@@ -45,7 +45,7 @@ enum placeT {
 }
 
 
-public class Chicken {
+public class ChickenClass{
     
     var type:ChickenT
     var place:placeT
