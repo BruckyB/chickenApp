@@ -13,7 +13,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func fButton(_ sender: Any) {
+        performSegue(withIdentifier: "freezerSegue", sender: nil)
+    }
+    
 
 }
 
