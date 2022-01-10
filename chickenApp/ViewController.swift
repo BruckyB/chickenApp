@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var chickens:Chicken = [Chicken]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
