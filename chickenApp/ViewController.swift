@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var chickens:ChickenClass = []
+    var chickens:[ChickenClass] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
