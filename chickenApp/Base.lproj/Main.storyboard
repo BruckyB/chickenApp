@@ -1519,6 +1519,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Yj-eg-Xvw"/>
+                    <connections>
+                        <outlet property="segController" destination="kMz-In-B3s" id="PWu-PA-Oi2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="900-Hm-OpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
