@@ -29,7 +29,7 @@ case regs, nugs, spicy, strips, gFilets, gNugs
 }
 
 enum placeT {
-    case Freezer,Thaw,Bread,none
+    case Freezer,Thaw,Bread,nones
     var value:Bool{
         switch self {
         case .Freezer:
@@ -38,14 +38,14 @@ enum placeT {
             return true
         case .Bread:
             return true
-        case .none:
+        case .nones:
             return true
         }
     }
 }
 
 
-public class Chicken {
+public class ChickenClass{
     
     var type:ChickenT
     var place:placeT
