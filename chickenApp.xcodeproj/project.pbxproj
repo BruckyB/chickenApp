@@ -15,6 +15,8 @@
 		65731C312785DC5D00DB80D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65731C302785DC5D00DB80D9 /* Assets.xcassets */; };
 		65731C342785DC5D00DB80D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65731C322785DC5D00DB80D9 /* LaunchScreen.storyboard */; };
 		65F77A78278DBF3C00322532 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F77A77278DBF3C00322532 /* ViewController2.swift */; };
+		65F77A7A278DC35F00322532 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F77A79278DC35F00322532 /* ViewController3.swift */; };
+		65F77A7C278DC36B00322532 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F77A7B278DC36B00322532 /* ViewController4.swift */; };
 		9C9F0922278C7788002D2299 /* ChickenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F0921278C7788002D2299 /* ChickenClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		65731C332785DC5D00DB80D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65731C352785DC5D00DB80D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F77A77278DBF3C00322532 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		65F77A79278DC35F00322532 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		65F77A7B278DC36B00322532 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		9C9F0921278C7788002D2299 /* ChickenClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,8 @@
 				65731C262785DC5B00DB80D9 /* SceneDelegate.swift */,
 				65731C282785DC5B00DB80D9 /* ViewController.swift */,
 				65F77A77278DBF3C00322532 /* ViewController2.swift */,
+				65F77A79278DC35F00322532 /* ViewController3.swift */,
+				65F77A7B278DC36B00322532 /* ViewController4.swift */,
 				9C9F0921278C7788002D2299 /* ChickenClass.swift */,
 				65731C2A2785DC5B00DB80D9 /* Main.storyboard */,
 				65731C302785DC5D00DB80D9 /* Assets.xcassets */,
@@ -150,8 +156,10 @@
 				65731C292785DC5B00DB80D9 /* ViewController.swift in Sources */,
 				65731C2F2785DC5B00DB80D9 /* chickenApp.xcdatamodeld in Sources */,
 				65731C252785DC5B00DB80D9 /* AppDelegate.swift in Sources */,
+				65F77A7C278DC36B00322532 /* ViewController4.swift in Sources */,
 				65731C272785DC5B00DB80D9 /* SceneDelegate.swift in Sources */,
 				9C9F0922278C7788002D2299 /* ChickenClass.swift in Sources */,
+				65F77A7A278DC35F00322532 /* ViewController3.swift in Sources */,
 				65F77A78278DBF3C00322532 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
