@@ -21,12 +21,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Breading Table"/>
+                                <connections>
+                                    <action selector="bButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILl-9W-XPi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-rR-fi8">
                                 <rect key="frame" x="151" y="431" width="113" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Thaw Cabinet"/>
+                                <connections>
+                                    <action selector="tButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6I-C3-FLk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keY-YX-A0O">
                                 <rect key="frame" x="170" y="353" width="75" height="35"/>
@@ -75,7 +81,7 @@
                                     <action selector="segAction:" destination="SD3-5B-G0c" eventType="valueChanged" id="2Ft-Be-TNH"/>
                                 </connections>
                             </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-HZ-X6Z">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-HZ-X6Z">
                                 <rect key="frame" x="102" y="293" width="210" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sOF-Bn-DLn">
@@ -533,6 +539,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yWz-Iy-f0N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="centerX" secondItem="aN8-O9-oaC" secondAttribute="centerX" id="e5a-31-vWb"/>
+                            <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="centerY" secondItem="aN8-O9-oaC" secondAttribute="centerY" id="qxe-QU-qM7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Up-FY-eoU"/>
                 </viewController>

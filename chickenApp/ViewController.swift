@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "freezerSegue", sender: nil)
     }
     
-
+    @IBAction func tButton(_ sender: Any) {
+        performSegue(withIdentifier: "cabinetSegue", sender: nil)
+    }
+    
+    @IBAction func bButton(_ sender: Any) {
+        performSegue(withIdentifier: "tableSegue", sender: nil)
+    }
 }
 
