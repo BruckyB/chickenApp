@@ -558,9 +558,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="woW-nS-Cj0">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="woW-nS-Cj0">
                                 <rect key="frame" x="20" y="128" width="374" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="e8M-hO-C69"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Filets"/>
                                     <segment title="Nugs"/>
@@ -573,7 +575,7 @@
                                     <action selector="segAction:" destination="gyl-iZ-O8b" eventType="valueChanged" id="Whr-i6-wjm"/>
                                 </connections>
                             </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sD0-Rf-nnN">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sD0-Rf-nnN">
                                 <rect key="frame" x="102" y="293" width="210" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="K4A-XQ-dsz">
@@ -1031,6 +1033,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ELi-dr-U0q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sD0-Rf-nnN" firstAttribute="centerX" secondItem="sWs-Ml-E9K" secondAttribute="centerX" id="4uO-Oe-3CX"/>
+                            <constraint firstItem="sD0-Rf-nnN" firstAttribute="top" secondItem="woW-nS-Cj0" secondAttribute="bottom" constant="134" id="Byz-Cl-kHX"/>
+                            <constraint firstItem="woW-nS-Cj0" firstAttribute="top" secondItem="ELi-dr-U0q" secondAttribute="top" constant="40" id="J22-M0-KTG"/>
+                            <constraint firstItem="ELi-dr-U0q" firstAttribute="trailing" secondItem="woW-nS-Cj0" secondAttribute="trailing" constant="20" id="R1O-1U-RU8"/>
+                            <constraint firstItem="woW-nS-Cj0" firstAttribute="leading" secondItem="ELi-dr-U0q" secondAttribute="leading" constant="20" id="ctP-LJ-YIY"/>
+                            <constraint firstItem="sD0-Rf-nnN" firstAttribute="centerY" secondItem="sWs-Ml-E9K" secondAttribute="centerY" id="fMa-NY-eET"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2bu-Xm-BwT"/>
                 </viewController>
