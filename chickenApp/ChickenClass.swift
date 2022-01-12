@@ -49,10 +49,12 @@ public class ChickenClass{
     
     var type:ChickenT
     var place:placeT
+    var numberChick:Int
     
-    init(type:ChickenT,place:placeT) {
+    init(type:ChickenT,place:placeT,num:Int) {
         self.type = type
         self.place = place
+        self.numberChick = num
     }
     
     

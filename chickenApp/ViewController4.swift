@@ -10,8 +10,8 @@ import UIKit
 class ViewController4: UIViewController {
 
     var chicken:[ChickenClass] = []
-    
-    @IBOutlet weak var segControler: UISegmentedControl!
+    var chickenType:ChickenT = .regs
+    @IBOutlet weak var segController: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,23 +19,23 @@ class ViewController4: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        segControler.selectedSegmentIndex = -1
+        segController.selectedSegmentIndex = -1
     }
     
     @IBAction func segAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            chicken.append(ChickenClass(type: .regs, place: .Freezer))
+            chickenType = .regs
         case 1:
-            chicken.append(ChickenClass(type: .nugs, place: .Freezer))
+            chickenType = .nugs
         case 2:
-            chicken.append(ChickenClass(type: .spicy, place: .Freezer))
+            chickenType = .spicy
         case 3:
-            chicken.append(ChickenClass(type: .strips, place: .Freezer))
+            chickenType = .strips
         case 4:
-            chicken.append(ChickenClass(type: .gFilets, place: .Freezer))
+            chickenType = .gFilets
         case 5:
-            chicken.append(ChickenClass(type: .gNugs, place: .Freezer))
+            chickenType = .gNugs
         default:
         print("error in seg controller")
         }
