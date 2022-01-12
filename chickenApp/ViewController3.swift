@@ -9,13 +9,36 @@ import UIKit
 
 class ViewController3: UIViewController {
 
+    var chicken:[ChickenClass] = []
+    
+    @IBOutlet weak var segController: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func segAction(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        segController.selectedSegmentIndex = -1
+    }
+
+    @IBAction func segAction(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            chicken.append(ChickenClass(type: .regs, place: .Freezer))
+        case 1:
+            chicken.append(ChickenClass(type: .nugs, place: .Freezer))
+        case 2:
+            chicken.append(ChickenClass(type: .spicy, place: .Freezer))
+        case 3:
+            chicken.append(ChickenClass(type: .strips, place: .Freezer))
+        case 4:
+            chicken.append(ChickenClass(type: .gFilets, place: .Freezer))
+        case 5:
+            chicken.append(ChickenClass(type: .gNugs, place: .Freezer))
+        default:
+        print("error in seg controller")
+        }
     }
     
     @IBAction func b1(_ sender: UIButton) {

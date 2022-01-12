@@ -545,6 +545,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Up-FY-eoU"/>
+                    <connections>
+                        <outlet property="segController" destination="n3h-ik-EUp" id="ouS-gH-oyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-8N-sK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1043,6 +1046,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2bu-Xm-BwT"/>
+                    <connections>
+                        <outlet property="segControler" destination="woW-nS-Cj0" id="Nq4-Ox-UEi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSN-qC-1Az" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
