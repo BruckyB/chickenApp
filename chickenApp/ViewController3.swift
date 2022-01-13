@@ -42,7 +42,7 @@ class ViewController3: UIViewController {
     
     func buttonThing(sender:UIButton,int:Int){
         if sender.backgroundColor == UIColor.green {
-            sender.backgroundColor = UIColor.red
+            sender.backgroundColor = UIColor.gray
         }else {
             sender .backgroundColor = UIColor.green
             chicken.append(ChickenClass(type: chickenType, place: .Freezer,num: int))
