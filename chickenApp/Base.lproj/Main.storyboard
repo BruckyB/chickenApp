@@ -1546,6 +1546,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Yj-eg-Xvw"/>
                     <connections>
+                        <outlet property="b1" destination="hAX-cD-Bx1" id="zeS-te-lqR"/>
                         <outlet property="segController" destination="kMz-In-B3s" id="PWu-PA-Oi2"/>
                     </connections>
                 </viewController>

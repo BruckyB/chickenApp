@@ -79,6 +79,56 @@ public class ChickenClass{
         self.type = type
         self.place = place
         self.numberChick = num
+        switch type {
+        case .regs:
+            if place == .Freezer {
+                freezerR.append(num)
+            } else if place == .Thaw {
+                thawR.append(num)
+            } else {
+                breadingR.append(num)
+            }
+        case .nugs:
+            if place == .Freezer {
+                freezerN.append(num)
+            } else if place == .Thaw {
+                thawN.append(num)
+            } else {
+                breadingN.append(num)
+            }
+        case .spicy:
+            if place == .Freezer {
+                freezerSF.append(num)
+            } else if place == .Thaw {
+                thawSF.append(num)
+            } else {
+                breadingSF.append(num)
+            }
+        case .strips:
+            if place == .Freezer {
+                freezerST.append(num)
+            } else if place == .Thaw {
+                thawST.append(num)
+            } else {
+                breadingST.append(num)
+            }
+        case .gFilets:
+            if place == .Freezer {
+                freezerGF.append(num)
+            } else if place == .Thaw {
+                thawGF.append(num)
+            } else {
+                breadingGF.append(num)
+            }
+        case .gNugs:
+            if place == .Freezer {
+                freezerGN.append(num)
+            } else if place == .Thaw {
+                thawGN.append(num)
+            } else {
+                breadingGN.append(num)
+            }
+        }
     }
     
     

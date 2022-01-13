@@ -10,6 +10,55 @@ import UIKit
 class ViewController2: UIViewController {
 
     var chicken:[ChickenClass] = []
+    @IBOutlet weak var b1: UIButton!
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var b3: UIButton!
+    @IBOutlet weak var b4: UIButton!
+    @IBOutlet weak var b5: UIButton!
+    @IBOutlet weak var b6: UIButton!
+    @IBOutlet weak var b7: UIButton!
+    @IBOutlet weak var b8: UIButton!
+    @IBOutlet weak var b9: UIButton!
+    @IBOutlet weak var b10: UIButton!
+    @IBOutlet weak var b11: UIButton!
+    @IBOutlet weak var b12: UIButton!
+    @IBOutlet weak var b13: UIButton!
+    @IBOutlet weak var b15: UIButton!
+    @IBOutlet weak var b16: UIButton!
+    @IBOutlet weak var b17: UIButton!
+    @IBOutlet weak var b18: UIButton!
+    @IBOutlet weak var b19: UIButton!
+    @IBOutlet weak var b20: UIButton!
+    @IBOutlet weak var b21: UIButton!
+    @IBOutlet weak var b22: UIButton!
+    @IBOutlet weak var b23: UIButton!
+    @IBOutlet weak var b24: UIButton!
+    @IBOutlet weak var b25: UIButton!
+    @IBOutlet weak var b26: UIButton!
+    @IBOutlet weak var b27: UIButton!
+    @IBOutlet weak var b28: UIButton!
+    @IBOutlet weak var b29: UIButton!
+    @IBOutlet weak var b30: UIButton!
+    @IBOutlet weak var b31: UIButton!
+    @IBOutlet weak var b32: UIButton!
+    @IBOutlet weak var b33: UIButton!
+    @IBOutlet weak var b34: UIButton!
+    @IBOutlet weak var b35: UIButton!
+    @IBOutlet weak var b36: UIButton!
+    @IBOutlet weak var b37: UIButton!
+    @IBOutlet weak var b38: UIButton!
+    @IBOutlet weak var b39: UIButton!
+    @IBOutlet weak var b40: UIButton!
+    @IBOutlet weak var b41: UIButton!
+    @IBOutlet weak var b42: UIButton!
+    @IBOutlet weak var b43: UIButton!
+    @IBOutlet weak var b44: UIButton!
+    @IBOutlet weak var b45: UIButton!
+    @IBOutlet weak var b46: UIButton!
+    @IBOutlet weak var b47: UIButton!
+    @IBOutlet weak var b48: UIButton!
+    @IBOutlet weak var b49: UIButton!
+    @IBOutlet weak var b50: UIButton!
     var chickenType:ChickenT = .regs
     @IBOutlet weak var segController: UISegmentedControl!
     override func viewDidLoad() {
@@ -30,6 +79,10 @@ class ViewController2: UIViewController {
              chicken.append(ChickenClass(type: chickenType, place: .Freezer,num: int))
          }
      }
+    
+    func diffrentColor(){
+        
+    }
     
     @IBAction func segAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
