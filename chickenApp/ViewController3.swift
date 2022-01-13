@@ -11,6 +11,24 @@ class ViewController3: UIViewController {
 
     var chicken:[ChickenClass] = []
     var chickenType:ChickenT = .regs
+    var usedHereR:[Int] = []
+    var inUseR:[Int] = []
+    var canBeUsedR:[Int] = []
+    var usedHereN:[Int] = []
+    var inUseN:[Int] = []
+    var canBeUsedN:[Int] = []
+    var usedHereS:[Int] = []
+    var inUseS:[Int] = []
+    var canBeUsedS:[Int] = []
+    var usedHereST:[Int] = []
+    var inUseST:[Int] = []
+    var canBeUsedST:[Int] = []
+    var usedHereGF:[Int] = []
+    var inUseGF:[Int] = []
+    var canBeUsedGF:[Int] = []
+    var usedHereGN:[Int] = []
+    var inUseGN:[Int] = []
+    var canBeUsedGN:[Int] = []
     @IBOutlet weak var segController: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
