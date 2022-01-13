@@ -11,30 +11,6 @@ class ViewController3: UIViewController {
 
     var chicken:[ChickenClass] = []
     var chickenType:ChickenT = .regs
-    var freezerR:[Int] = []
-    var freezerN:[Int] = []
-    var freezerSF:[Int] = []
-    var freezerST:[Int] = []
-    var freezerGF:[Int] = []
-    var freezerGN:[Int] = []
-    var thawR:[Int] = []
-    var thawN:[Int] = []
-    var thawSF:[Int] = []
-    var thawST:[Int] = []
-    var thawGF:[Int] = []
-    var thawGN:[Int] = []
-    var breadingR:[Int] = []
-    var breadingN:[Int] = []
-    var breadingSF:[Int] = []
-    var breadingST:[Int] = []
-    var breadingGF:[Int] = []
-    var breadingGN:[Int] = []
-    var notUsedR:[Int] = []
-    var notUsedN:[Int] = []
-    var notUsedSF:[Int] = []
-    var notUsedST:[Int] = []
-    var notUsedGF:[Int] = []
-    var notUsedGN:[Int] = []
     @IBOutlet weak var segController: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
