@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 enum ChickenT {
 case regs, nugs, spicy, strips, gFilets, gNugs
@@ -131,55 +132,214 @@ public class ChickenClass{
         }
     }
     
+    func changeLocation(place:placeT,num:Int,type:ChickenT){
+        switch place {
+        case .Freezer:
+            switch type {
+            case .regs:
+                if ChickenClass.notUsedR.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedR {
+                        if each == num {
+                            ChickenClass.notUsedR.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerR.append(num)
+                }
+            case .nugs:
+                if ChickenClass.notUsedN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedN {
+                        if each == num {
+                            ChickenClass.notUsedN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerN.append(num)
+                }
+            case .spicy:
+                if ChickenClass.notUsedSF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedSF {
+                        if each == num {
+                            ChickenClass.notUsedSF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerSF.append(num)
+                }
+            case .strips:
+                if ChickenClass.notUsedST.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedST {
+                        if each == num {
+                            ChickenClass.notUsedST.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerST.append(num)
+                }
+            case .gFilets:
+                if ChickenClass.notUsedGF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedGF {
+                        if each == num {
+                            ChickenClass.notUsedGF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerGF.append(num)
+                }
+            case .gNugs:
+                if ChickenClass.notUsedGN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedGN {
+                        if each == num {
+                            ChickenClass.notUsedGN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerGN.append(num)
+                }
+            }
+        case .Thaw:
+            switch type {
+            case .regs:
+                if ChickenClass.freezerR.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerR {
+                        if each == num {
+                            ChickenClass.freezerR.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawR.append(num)
+                }
+            case .nugs:
+                if ChickenClass.freezerN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerN {
+                        if each == num {
+                            ChickenClass.freezerN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawN.append(num)
+                }
+            case .spicy:
+                if ChickenClass.freezerSF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerSF {
+                        if each == num {
+                            ChickenClass.freezerSF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawSF.append(num)
+                }
+            case .strips:
+                if ChickenClass.freezerST.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerST {
+                        if each == num {
+                            ChickenClass.freezerST.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawST.append(num)
+                }
+            case .gFilets:
+                if ChickenClass.freezerGF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerGF {
+                        if each == num {
+                            ChickenClass.freezerGF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawGF.append(num)
+                }
+            case .gNugs:
+                if ChickenClass.freezerGN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerGN {
+                        if each == num {
+                            ChickenClass.freezerGN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawGN.append(num)
+                }
+            }
+        case .Bread:
+            return
+        case .nones:
+            return
+        }
+    }
+    
     func colorChange(button:UIButton,type:ChickenT){
         switch type {
         case .regs:
             if ChickenClass.freezerR.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawR.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawR.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingR.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         case .nugs:
             if ChickenClass.freezerN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawN.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         case .spicy:
             if ChickenClass.freezerSF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawSF.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawSF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingSF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         case .strips:
             if ChickenClass.freezerST.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawST.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawST.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingST.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         case .gFilets:
             if ChickenClass.freezerGF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawGF.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawGF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingGF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         case .gNugs:
             if ChickenClass.freezerGN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.green
-            } else if ChickenClass.thawGN.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.cyan
+            } else if ChickenClass.thawGN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
+            } else if ChickenClass.breadingGN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.green
             } else {
-                button.backgroundColor = UIColor.systemPink
+                button.backgroundColor = UIColor.lightGray
             }
         }
     }

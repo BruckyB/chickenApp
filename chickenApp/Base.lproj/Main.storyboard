@@ -606,6 +606,56 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Up-FY-eoU"/>
                     <connections>
+                        <outlet property="b1" destination="gJL-BI-IKL" id="FM6-u1-x2v"/>
+                        <outlet property="b10" destination="MoF-DN-80M" id="SeI-IO-VMG"/>
+                        <outlet property="b11" destination="CGM-oT-drE" id="fhf-BF-X5i"/>
+                        <outlet property="b12" destination="Te3-n5-iy1" id="xZ5-5v-dB2"/>
+                        <outlet property="b13" destination="HYB-Ek-NdA" id="iro-xF-E3v"/>
+                        <outlet property="b14" destination="MS4-Pe-OBT" id="uqb-SK-I2e"/>
+                        <outlet property="b15" destination="0Ke-ZS-ami" id="1uT-q0-bb2"/>
+                        <outlet property="b16" destination="XsK-fF-vSG" id="73d-6g-n9b"/>
+                        <outlet property="b17" destination="8B0-VH-JfN" id="KZU-S1-pMf"/>
+                        <outlet property="b18" destination="dqq-69-igs" id="rTv-FL-Gj6"/>
+                        <outlet property="b19" destination="oYj-bx-jxD" id="fgS-Dz-Nga"/>
+                        <outlet property="b2" destination="02j-oR-xVn" id="mSU-YQ-vmP"/>
+                        <outlet property="b20" destination="lkj-FT-aWJ" id="gqS-EY-MZ6"/>
+                        <outlet property="b21" destination="73W-Vb-5Bd" id="khR-da-Cqq"/>
+                        <outlet property="b22" destination="f3B-d0-2Rs" id="esl-Q5-T75"/>
+                        <outlet property="b23" destination="zOW-WL-Fk4" id="DZI-mN-FGW"/>
+                        <outlet property="b24" destination="mVG-Ch-q0J" id="i7D-Jh-NL0"/>
+                        <outlet property="b25" destination="fUb-WW-5Qa" id="DZK-hw-cVw"/>
+                        <outlet property="b26" destination="Gwi-0a-58B" id="Tmn-WJ-GJk"/>
+                        <outlet property="b27" destination="xIV-dD-5e5" id="5RX-Uy-Jrh"/>
+                        <outlet property="b28" destination="NYV-3D-0c8" id="HFU-HY-e4d"/>
+                        <outlet property="b29" destination="mnW-31-Nhi" id="sSV-Al-75O"/>
+                        <outlet property="b3" destination="Rq0-6c-LNe" id="vMF-qD-wqX"/>
+                        <outlet property="b30" destination="MPU-EZ-g9h" id="FiA-e1-D1i"/>
+                        <outlet property="b31" destination="PpN-lC-bfG" id="Fw2-9B-Xaf"/>
+                        <outlet property="b32" destination="Qwi-Pi-3rh" id="OwY-Sr-BRD"/>
+                        <outlet property="b33" destination="4lv-Ht-WQ9" id="VqN-Cp-Wuj"/>
+                        <outlet property="b34" destination="dcW-N2-YIZ" id="6u9-bD-FaR"/>
+                        <outlet property="b35" destination="dgG-2a-t91" id="1BE-uA-1mn"/>
+                        <outlet property="b36" destination="h5w-N1-RKT" id="5wh-gD-nxq"/>
+                        <outlet property="b37" destination="PX1-X1-KMb" id="dsd-zi-ZoH"/>
+                        <outlet property="b38" destination="ErJ-n0-Zhu" id="JzV-5f-8Nx"/>
+                        <outlet property="b39" destination="Ocv-TJ-7s9" id="zeB-GN-dhZ"/>
+                        <outlet property="b4" destination="vWR-Ht-hsh" id="spc-g4-fXo"/>
+                        <outlet property="b40" destination="wRy-Mi-bnX" id="l4l-mb-eia"/>
+                        <outlet property="b41" destination="tCm-0R-QZx" id="I0A-a0-Hfk"/>
+                        <outlet property="b42" destination="dMF-DC-5gT" id="eha-Ml-90T"/>
+                        <outlet property="b43" destination="eH2-NZ-xxB" id="Cvm-xD-ZXA"/>
+                        <outlet property="b44" destination="RLB-kI-D81" id="LIU-QI-iu3"/>
+                        <outlet property="b45" destination="dg7-rJ-bXR" id="k7b-Zu-MSo"/>
+                        <outlet property="b46" destination="Ff1-wr-Cnd" id="cih-7B-4Ey"/>
+                        <outlet property="b47" destination="6z5-oe-lzi" id="Yip-O8-Ep0"/>
+                        <outlet property="b48" destination="68W-U4-KVF" id="0GX-he-27c"/>
+                        <outlet property="b49" destination="sdB-GW-UHl" id="x5H-Pn-5Lq"/>
+                        <outlet property="b5" destination="qxN-u8-KvE" id="Jwz-nw-Ljf"/>
+                        <outlet property="b50" destination="RMI-0d-z7C" id="GAv-yK-8kC"/>
+                        <outlet property="b6" destination="aNw-fs-7Tc" id="4CF-N3-Z6J"/>
+                        <outlet property="b7" destination="v2m-kW-xJX" id="lKx-ZY-MkZ"/>
+                        <outlet property="b8" destination="AZY-73-ONU" id="2JE-cT-deh"/>
+                        <outlet property="b9" destination="FwH-3H-WDK" id="jgL-kb-O0Z"/>
                         <outlet property="segController" destination="n3h-ik-EUp" id="ouS-gH-oyZ"/>
                     </connections>
                 </viewController>

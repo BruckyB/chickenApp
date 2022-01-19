@@ -10,6 +10,7 @@ import UIKit
 class ViewController3: UIViewController {
 
     var chicken:[ChickenClass] = []
+    var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
     @IBOutlet weak var segController: UISegmentedControl!
     @IBOutlet weak var b1: UIButton!
@@ -26,6 +27,7 @@ class ViewController3: UIViewController {
     @IBOutlet weak var b12: UIButton!
     @IBOutlet weak var b13: UIButton!
     @IBOutlet weak var b15: UIButton!
+    @IBOutlet weak var b14: UIButton!
     @IBOutlet weak var b16: UIButton!
     @IBOutlet weak var b17: UIButton!
     @IBOutlet weak var b18: UIButton!
@@ -63,7 +65,56 @@ class ViewController3: UIViewController {
     @IBOutlet weak var b50: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonArray.append(b1)
+        buttonArray.append(b2)
+        buttonArray.append(b3)
+        buttonArray.append(b4)
+        buttonArray.append(b5)
+        buttonArray.append(b6)
+        buttonArray.append(b7)
+        buttonArray.append(b8)
+        buttonArray.append(b9)
+        buttonArray.append(b10)
+        buttonArray.append(b11)
+        buttonArray.append(b12)
+        buttonArray.append(b13)
+        buttonArray.append(b14)
+        buttonArray.append(b15)
+        buttonArray.append(b16)
+        buttonArray.append(b17)
+        buttonArray.append(b18)
+        buttonArray.append(b19)
+        buttonArray.append(b20)
+        buttonArray.append(b21)
+        buttonArray.append(b22)
+        buttonArray.append(b23)
+        buttonArray.append(b24)
+        buttonArray.append(b25)
+        buttonArray.append(b26)
+        buttonArray.append(b27)
+        buttonArray.append(b28)
+        buttonArray.append(b29)
+        buttonArray.append(b30)
+        buttonArray.append(b31)
+        buttonArray.append(b32)
+        buttonArray.append(b33)
+        buttonArray.append(b34)
+        buttonArray.append(b35)
+        buttonArray.append(b36)
+        buttonArray.append(b37)
+        buttonArray.append(b38)
+        buttonArray.append(b39)
+        buttonArray.append(b40)
+        buttonArray.append(b41)
+        buttonArray.append(b42)
+        buttonArray.append(b43)
+        buttonArray.append(b44)
+        buttonArray.append(b45)
+        buttonArray.append(b46)
+        buttonArray.append(b47)
+        buttonArray.append(b48)
+        buttonArray.append(b49)
+        buttonArray.append(b50)
         // Do any additional setup after loading the view.
     }
     
@@ -72,11 +123,16 @@ class ViewController3: UIViewController {
     }
     
     func buttonThing(sender:UIButton,int:Int){
-        if sender.backgroundColor == UIColor.green {
-            sender.backgroundColor = UIColor.gray
-        }else {
-            sender .backgroundColor = UIColor.green
-            chicken.append(ChickenClass(type: chickenType, place: .Freezer,num: int))
+        if sender.backgroundColor == UIColor.yellow {
+            sender.backgroundColor = UIColor.green
+        //    chicken.changeLocation(place: .Bread, num: int)
+        }
+    }
+    
+    func diffrentColor(types:ChickenT){
+        for blah in buttonArray {
+        var blahs = ChickenClass(type: .nugs, place: .nones, num: 0)
+                blahs.colorChange(button: blah, type: types)
         }
     }
 
@@ -84,16 +140,22 @@ class ViewController3: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             chickenType = .regs
+            diffrentColor(types: .regs)
         case 1:
             chickenType = .nugs
+            diffrentColor(types: .nugs)
         case 2:
             chickenType = .spicy
+            diffrentColor(types: .spicy)
         case 3:
             chickenType = .strips
+            diffrentColor(types: .strips)
         case 4:
             chickenType = .gFilets
+            diffrentColor(types: .gFilets)
         case 5:
             chickenType = .gNugs
+            diffrentColor(types: .gNugs)
         default:
         print("error in seg controller")
         }
