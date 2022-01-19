@@ -134,9 +134,8 @@ class ViewController2: UIViewController {
     
     func diffrentColor(types:ChickenT){
         for blah in buttonArray {
-            if let car = chicken.first{
-                car.colorChange(button: blah, type: types)
-            }
+        var blahs = ChickenClass(type: .nugs, place: .nones, num: 0)
+                blahs.colorChange(button: blah, type: types)
         }
     }
     
