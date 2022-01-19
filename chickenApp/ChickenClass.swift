@@ -137,20 +137,141 @@ public class ChickenClass{
         case .Freezer:
             switch type {
             case .regs:
-                <#code#>
+                if ChickenClass.notUsedR.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedR {
+                        if each == num {
+                            ChickenClass.notUsedR.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerR.append(num)
+                }
             case .nugs:
-                <#code#>
+                if ChickenClass.notUsedN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedN {
+                        if each == num {
+                            ChickenClass.notUsedN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerN.append(num)
+                }
             case .spicy:
-                <#code#>
+                if ChickenClass.notUsedSF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedSF {
+                        if each == num {
+                            ChickenClass.notUsedSF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerSF.append(num)
+                }
             case .strips:
-                <#code#>
+                if ChickenClass.notUsedST.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedST {
+                        if each == num {
+                            ChickenClass.notUsedST.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerST.append(num)
+                }
             case .gFilets:
-                <#code#>
+                if ChickenClass.notUsedGF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedGF {
+                        if each == num {
+                            ChickenClass.notUsedGF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerGF.append(num)
+                }
             case .gNugs:
-                <#code#>
+                if ChickenClass.notUsedGN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.notUsedGN {
+                        if each == num {
+                            ChickenClass.notUsedGN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.freezerGN.append(num)
+                }
             }
         case .Thaw:
-            return
+            switch type {
+            case .regs:
+                if ChickenClass.freezerR.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerR {
+                        if each == num {
+                            ChickenClass.freezerR.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawR.append(num)
+                }
+            case .nugs:
+                if ChickenClass.freezerN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerN {
+                        if each == num {
+                            ChickenClass.freezerN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawN.append(num)
+                }
+            case .spicy:
+                if ChickenClass.freezerSF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerSF {
+                        if each == num {
+                            ChickenClass.freezerSF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawSF.append(num)
+                }
+            case .strips:
+                if ChickenClass.freezerST.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerST {
+                        if each == num {
+                            ChickenClass.freezerST.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawST.append(num)
+                }
+            case .gFilets:
+                if ChickenClass.freezerGF.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerGF {
+                        if each == num {
+                            ChickenClass.freezerGF.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawGF.append(num)
+                }
+            case .gNugs:
+                if ChickenClass.freezerGN.contains(num) {
+                    var blah = 0
+                    for each in ChickenClass.freezerGN {
+                        if each == num {
+                            ChickenClass.freezerGN.remove(at: blah)
+                        }
+                        blah+=1
+                    }
+                    ChickenClass.thawGN.append(num)
+                }
+            }
         case .Bread:
             return
         case .nones:
