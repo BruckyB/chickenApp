@@ -16,36 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B6-V2-qke">
-                                <rect key="frame" x="147" y="515" width="120" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B6-V2-qke">
+                                <rect key="frame" x="147" y="499" width="120" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Breading Table"/>
                                 <connections>
                                     <action selector="bButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILl-9W-XPi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-rR-fi8">
-                                <rect key="frame" x="151" y="431" width="113" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-rR-fi8">
+                                <rect key="frame" x="150.5" y="432.5" width="113" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Thaw Cabinet"/>
                                 <connections>
                                     <action selector="tButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6I-C3-FLk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keY-YX-A0O">
-                                <rect key="frame" x="170" y="353" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keY-YX-A0O">
+                                <rect key="frame" x="170.5" y="367" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Freezer"/>
                                 <connections>
                                     <action selector="fButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZ7-pW-Rzi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-Qv-DwQ">
+                                <rect key="frame" x="103.5" y="193" width="207" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4sW-rR-fi8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="79Y-An-sLI"/>
+                            <constraint firstItem="keY-YX-A0O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8a8-Ps-oss"/>
+                            <constraint firstItem="8B6-V2-qke" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StA-7S-ukd"/>
+                            <constraint firstItem="2Vc-Qv-DwQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WPf-Bm-7cs"/>
+                            <constraint firstItem="4sW-rR-fi8" firstAttribute="top" secondItem="keY-YX-A0O" secondAttribute="bottom" constant="34.5" id="ZoU-iB-xzl"/>
+                            <constraint firstItem="8B6-V2-qke" firstAttribute="top" secondItem="4sW-rR-fi8" secondAttribute="bottom" constant="35.5" id="e33-Ht-GJ5"/>
+                            <constraint firstItem="keY-YX-A0O" firstAttribute="top" secondItem="2Vc-Qv-DwQ" secondAttribute="bottom" constant="138" id="pQJ-zC-fyE"/>
+                            <constraint firstItem="4sW-rR-fi8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tey-Is-Mdy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tUX-Zc-3EY"/>
                     <connections>
@@ -56,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="82"/>
+            <point key="canvasLocation" x="728.98550724637687" y="81.696428571428569"/>
         </scene>
         <!--View Controller3-->
         <scene sceneID="zm7-ML-PzF">
@@ -1217,7 +1230,58 @@
                     </view>
                     <navigationItem key="navigationItem" id="2bu-Xm-BwT"/>
                     <connections>
+                        <outlet property="b1" destination="RmJ-uQ-YMp" id="geB-Db-TXy"/>
+                        <outlet property="b10" destination="BFw-YG-bOv" id="4Wu-I2-8gc"/>
+                        <outlet property="b11" destination="UFb-3N-Mpc" id="wxA-dk-5ZW"/>
+                        <outlet property="b12" destination="OFx-iW-TxB" id="wDv-gQ-ZmC"/>
+                        <outlet property="b13" destination="ccx-Ks-xv2" id="4OG-k3-53M"/>
+                        <outlet property="b14" destination="04u-xe-hJe" id="Z05-eE-hxE"/>
+                        <outlet property="b15" destination="U3Y-TZ-Rix" id="3Da-WM-6lA"/>
+                        <outlet property="b16" destination="Xoo-b4-W34" id="mrO-LG-jsu"/>
+                        <outlet property="b17" destination="ALZ-k5-00c" id="u8o-f4-Ktd"/>
+                        <outlet property="b18" destination="Hk6-hM-AR4" id="e3c-C2-8b1"/>
+                        <outlet property="b19" destination="2wR-Gt-ZGm" id="Nuj-RD-BbG"/>
+                        <outlet property="b2" destination="xTQ-Wx-lzP" id="fuG-vB-E6O"/>
+                        <outlet property="b20" destination="mwD-dK-EN7" id="lIC-wo-mSh"/>
+                        <outlet property="b21" destination="EMg-KK-Le5" id="kgj-bJ-uoN"/>
+                        <outlet property="b22" destination="55x-7n-6Mg" id="PKP-lO-RMf"/>
+                        <outlet property="b23" destination="R9c-q8-PMv" id="VeA-4H-RzV"/>
+                        <outlet property="b24" destination="KjM-hR-BeH" id="VWT-OJ-lJj"/>
+                        <outlet property="b25" destination="cUl-qG-Shb" id="uLc-Ry-se9"/>
+                        <outlet property="b26" destination="ySQ-CJ-9iD" id="TOr-JZ-1rL"/>
+                        <outlet property="b27" destination="gBW-yy-OjQ" id="g9g-7A-8Hl"/>
+                        <outlet property="b28" destination="UU6-U8-DhL" id="rKF-L7-uxQ"/>
+                        <outlet property="b29" destination="Xjb-Ve-P1c" id="0Cq-LV-5mQ"/>
+                        <outlet property="b3" destination="YXh-hz-ljv" id="h78-rM-QVV"/>
+                        <outlet property="b30" destination="atF-sH-bMs" id="pMT-x3-lQQ"/>
+                        <outlet property="b31" destination="mV4-GW-55K" id="T5y-TK-Pq7"/>
+                        <outlet property="b32" destination="OYn-KI-KQ8" id="VEX-Pp-P6z"/>
+                        <outlet property="b33" destination="SLN-oM-lWo" id="Szz-VW-c3n"/>
+                        <outlet property="b34" destination="TmV-Dy-mlp" id="gXz-mB-ym5"/>
+                        <outlet property="b35" destination="Qr1-CH-BDH" id="3K9-Nx-e0L"/>
+                        <outlet property="b36" destination="Ts2-dh-cv5" id="QC4-46-Oc3"/>
+                        <outlet property="b37" destination="aHY-DN-Jdx" id="UPi-4y-NDZ"/>
+                        <outlet property="b38" destination="D1e-2k-xUG" id="rJK-fe-t3j"/>
+                        <outlet property="b39" destination="pW6-Vw-LDc" id="lXS-Vs-TPy"/>
+                        <outlet property="b4" destination="ZqY-sL-Rja" id="Fs7-K4-z9R"/>
+                        <outlet property="b40" destination="LnI-ZD-KxD" id="czv-Zh-1KU"/>
+                        <outlet property="b41" destination="YFp-oT-rL9" id="31h-Ww-uPU"/>
+                        <outlet property="b42" destination="T4b-ky-526" id="W4U-m9-gmD"/>
+                        <outlet property="b43" destination="GvC-lX-A8j" id="PAn-dT-Cug"/>
+                        <outlet property="b44" destination="nUq-YD-gds" id="HTQ-LS-hR8"/>
+                        <outlet property="b45" destination="vnS-pW-fHs" id="YOn-Jb-ehd"/>
+                        <outlet property="b46" destination="h2r-Ql-hYd" id="vb0-I2-1R4"/>
+                        <outlet property="b47" destination="k4T-l2-u6D" id="aVi-NH-1kp"/>
+                        <outlet property="b48" destination="tAR-o1-yLV" id="c6C-0d-fTV"/>
+                        <outlet property="b49" destination="ccg-CZ-v3P" id="xXN-rI-jG0"/>
+                        <outlet property="b5" destination="DhY-rZ-cXm" id="14z-Oe-R7d"/>
+                        <outlet property="b50" destination="3fq-DE-x0R" id="5qs-xf-brK"/>
+                        <outlet property="b6" destination="fil-A7-BTK" id="NEg-KH-shr"/>
+                        <outlet property="b7" destination="uvy-Wa-L4N" id="ImX-fg-z2N"/>
+                        <outlet property="b8" destination="4NZ-cy-9y4" id="SOg-S4-YSd"/>
+                        <outlet property="b9" destination="bFn-5v-avU" id="nxh-Fo-jKL"/>
                         <outlet property="segControler" destination="woW-nS-Cj0" id="Nq4-Ox-UEi"/>
+                        <outlet property="segController" destination="woW-nS-Cj0" id="uit-D8-iL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSN-qC-1Az" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
