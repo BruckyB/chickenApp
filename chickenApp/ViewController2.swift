@@ -124,12 +124,29 @@ class ViewController2: UIViewController {
     }
     
     func buttonThing(sender:UIButton,int:Int) {
-         if sender.backgroundColor == UIColor.green {
-             sender.backgroundColor = UIColor.gray
-         }else {
-             sender .backgroundColor = UIColor.green
-             chicken.append(ChickenClass(type: chickenType, place: .Freezer,num: int))
-         }
+        if sender.backgroundColor == UIColor.cyan {
+            sender.backgroundColor = UIColor.yellow
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
+        }
      }
     
     func diffrentColor(types:ChickenT){
