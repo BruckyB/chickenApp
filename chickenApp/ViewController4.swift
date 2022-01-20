@@ -124,26 +124,57 @@ class ViewController4: UIViewController {
     func buttonThing(sender:UIButton,int:Int){
         if sender.backgroundColor == UIColor.green {
             sender.backgroundColor = UIColor.gray
-        }else {
-            sender .backgroundColor = UIColor.green
-            chicken.append(ChickenClass(type: chickenType, place: .Freezer,num: int))
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .Bread, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .Bread, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .Bread, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .Bread, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .Bread, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .Bread, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
         }
     }
+    
+    func diffrentColor(types:ChickenT){
+        for blah in buttonArray {
+        let blahs = ChickenClass(type: .nugs, place: .nones, num: 0)
+                blahs.colorChange(button: blah, type: types)
+        }
+    }
+
     
     @IBAction func segAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             chickenType = .regs
+            diffrentColor(types: .regs)
         case 1:
             chickenType = .nugs
+            diffrentColor(types: .nugs)
         case 2:
             chickenType = .spicy
+            diffrentColor(types: .spicy)
         case 3:
             chickenType = .strips
+            diffrentColor(types: .strips)
         case 4:
             chickenType = .gFilets
+            diffrentColor(types: .gFilets)
         case 5:
             chickenType = .gNugs
+            diffrentColor(types: .gNugs)
         default:
         print("error in seg controller")
         }
@@ -178,7 +209,6 @@ class ViewController4: UIViewController {
     }
     @IBAction func b10(_ sender: UIButton) {
         buttonThing(sender: sender,int: 10)
-        
     }
     @IBAction func b11(_ sender: UIButton) {
         buttonThing(sender: sender,int: 11)

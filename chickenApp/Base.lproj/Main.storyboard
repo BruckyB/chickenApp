@@ -1280,7 +1280,6 @@
                         <outlet property="b7" destination="uvy-Wa-L4N" id="ImX-fg-z2N"/>
                         <outlet property="b8" destination="4NZ-cy-9y4" id="SOg-S4-YSd"/>
                         <outlet property="b9" destination="bFn-5v-avU" id="nxh-Fo-jKL"/>
-                        <outlet property="segControler" destination="woW-nS-Cj0" id="Nq4-Ox-UEi"/>
                         <outlet property="segController" destination="woW-nS-Cj0" id="uit-D8-iL0"/>
                     </connections>
                 </viewController>
