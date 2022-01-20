@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController3: UIViewController {
 
-    var chicken:[ChickenClass] = []
+    var chicken:[ChickenClass] = [ChickenClass(type: .regs, place: .Thaw, num: 9)]
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
     @IBOutlet weak var segController: UISegmentedControl!
@@ -120,12 +120,35 @@ class ViewController3: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         segController.selectedSegmentIndex = -1
+        print(ChickenClass.freezerR)
+        print(ChickenClass.thawR)
+        print(ChickenClass.breadingR)
+        print(ChickenClass.notUsedR)
     }
     
     func buttonThing(sender:UIButton,int:Int){
         if sender.backgroundColor == UIColor.yellow {
             sender.backgroundColor = UIColor.green
-        //    chicken.changeLocation(place: .Bread, num: int)
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .Thaw, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
         }
     }
     
@@ -211,6 +234,11 @@ class ViewController3: UIViewController {
     }
     @IBAction func b9(_ sender: UIButton) {
         buttonThing(sender: sender,int: 9)
+        print("the button func")
+        print(ChickenClass.freezerR)
+        print(ChickenClass.thawR)
+        print(ChickenClass.breadingR)
+        print(ChickenClass.notUsedR)
     }
     @IBAction func b10(_ sender: UIButton) {
         buttonThing(sender: sender,int: 10)
