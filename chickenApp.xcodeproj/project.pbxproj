@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650E00CB279AF49C0041AF39 /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E00CA279AF49C0041AF39 /* HelpScreen.swift */; };
 		65731C252785DC5B00DB80D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65731C242785DC5B00DB80D9 /* AppDelegate.swift */; };
 		65731C272785DC5B00DB80D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65731C262785DC5B00DB80D9 /* SceneDelegate.swift */; };
 		65731C292785DC5B00DB80D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65731C282785DC5B00DB80D9 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650E00CA279AF49C0041AF39 /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
 		65731C212785DC5B00DB80D9 /* chickenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chickenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65731C242785DC5B00DB80D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65731C262785DC5B00DB80D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				65F77A79278DC35F00322532 /* ViewController3.swift */,
 				65F77A7B278DC36B00322532 /* ViewController4.swift */,
 				9C9F0921278C7788002D2299 /* ChickenClass.swift */,
+				650E00CA279AF49C0041AF39 /* HelpScreen.swift */,
 				65731C2A2785DC5B00DB80D9 /* Main.storyboard */,
 				65731C302785DC5D00DB80D9 /* Assets.xcassets */,
 				65731C322785DC5D00DB80D9 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				9C9F0922278C7788002D2299 /* ChickenClass.swift in Sources */,
 				65F77A7A278DC35F00322532 /* ViewController3.swift in Sources */,
 				65F77A78278DBF3C00322532 /* ViewController2.swift in Sources */,
+				650E00CB279AF49C0041AF39 /* HelpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
