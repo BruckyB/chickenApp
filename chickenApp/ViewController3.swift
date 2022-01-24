@@ -119,6 +119,12 @@ class ViewController3: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if let item  = UserDefaults.standard.data(forKey: "SDATA"){
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([ChickenClass].self, from: item){
+                chicken = decoded
+            }
+        }
         segController.selectedSegmentIndex = -1
         print(ChickenClass.freezerR)
         print(ChickenClass.thawR)
@@ -127,7 +133,93 @@ class ViewController3: UIViewController {
     }
     
     func buttonThing(sender:UIButton,int:Int){
-        if sender.backgroundColor == UIColor.yellow {
+        if sender.backgroundColor == UIColor.lightGray {
+            switch segController.selectedSegmentIndex {
+            case 0:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            case 1:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            case 2:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            case 3:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            case 4:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            case 5:
+                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(chicken) {
+                        UserDefaults.standard.set(encoded, forKey: "SDATA")
+                }
+            default:
+                return
+            }
+            sender.backgroundColor = UIColor.cyan
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .nones, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .nones, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .nones, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .nones, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .nones, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .nones, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
+        }
+        else if sender.backgroundColor == UIColor.cyan {
+            sender.backgroundColor = UIColor.yellow
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .Freezer, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
+        }
+        else if sender.backgroundColor == UIColor.yellow {
             sender.backgroundColor = UIColor.green
             for chickens in chicken {
                 if chickens.numberChick == int{
@@ -150,12 +242,38 @@ class ViewController3: UIViewController {
                 }
             }
         }
+        else if sender.backgroundColor == UIColor.green {
+            sender.backgroundColor = UIColor.lightGray
+            for chickens in chicken {
+                if chickens.numberChick == int{
+                    switch segController.selectedSegmentIndex {
+                    case 0:
+                        chickens.changeLocation(place: .Bread, num: int, type: .regs)
+                    case 1:
+                        chickens.changeLocation(place: .Bread, num: int, type: .nugs)
+                    case 2:
+                        chickens.changeLocation(place: .Bread, num: int, type: .spicy)
+                    case 3:
+                        chickens.changeLocation(place: .Bread, num: int, type: .strips)
+                    case 4:
+                        chickens.changeLocation(place: .Bread, num: int, type: .gFilets)
+                    case 5:
+                        chickens.changeLocation(place: .Bread, num: int, type: .gNugs)
+                    default:
+                        return
+                    }
+                }
+            }
+        }
     }
     
     func diffrentColor(types:ChickenT){
         for blah in buttonArray {
-        var blahs = ChickenClass(type: .nugs, place: .nones, num: 0)
-                blahs.colorChange(button: blah, type: types)
+            if chicken.isEmpty {
+                blah.backgroundColor = UIColor.lightGray
+            } else {
+                chicken.first!.colorChange(button: blah, type: types)
+            }
         }
     }
 
@@ -181,6 +299,31 @@ class ViewController3: UIViewController {
             diffrentColor(types: .gNugs)
         default:
         print("error in seg controller")
+        }
+    }
+    
+    @IBAction func undo(_ sender : UIButton){
+    switch segController.selectedSegmentIndex {
+    case 0:
+        chicken.first!.undoLocation(type: .regs)
+        diffrentColor(types: .regs)
+    case 1:
+        chicken.first!.undoLocation(type: .nugs)
+        diffrentColor(types: .nugs)
+    case 2:
+        chicken.first!.undoLocation(type: .spicy)
+        diffrentColor(types: .spicy)
+    case 3:
+        chicken.first!.undoLocation(type: .strips)
+        diffrentColor(types: .strips)
+    case 4:
+        chicken.first!.undoLocation(type: .gFilets)
+        diffrentColor(types: .gFilets)
+    case 5:
+        chicken.first!.undoLocation(type: .gNugs)
+        diffrentColor(types: .gNugs)
+    default:
+        return
         }
     }
     
@@ -210,11 +353,6 @@ class ViewController3: UIViewController {
     }
     @IBAction func b9(_ sender: UIButton) {
         buttonThing(sender: sender,int: 9)
-        print("the button func")
-        print(ChickenClass.freezerR)
-        print(ChickenClass.thawR)
-        print(ChickenClass.breadingR)
-        print(ChickenClass.notUsedR)
     }
     @IBAction func b10(_ sender: UIButton) {
         buttonThing(sender: sender,int: 10)
