@@ -123,48 +123,60 @@ public class ChickenClass:Codable{
                 ChickenClass.freezerR.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawR.append(num)
-            } else {
+            } else if place == .Bread {
                 ChickenClass.breadingR.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         case .nugs:
             if place == .Freezer {
                 ChickenClass.freezerN.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawN.append(num)
-            } else {
+            } else if place == .Bread{
                 ChickenClass.breadingN.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         case .spicy:
             if place == .Freezer {
                 ChickenClass.freezerSF.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawSF.append(num)
-            } else {
+            } else if place == .Bread{
                 ChickenClass.breadingSF.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         case .strips:
             if place == .Freezer {
                 ChickenClass.freezerST.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawST.append(num)
-            } else {
+            } else if place == .Bread {
                 ChickenClass.breadingST.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         case .gFilets:
             if place == .Freezer {
                 ChickenClass.freezerGF.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawGF.append(num)
-            } else {
+            } else if place == .Bread{
                 ChickenClass.breadingGF.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         case .gNugs:
             if place == .Freezer {
                 ChickenClass.freezerGN.append(num)
             } else if place == .Thaw {
                 ChickenClass.thawGN.append(num)
-            } else {
+            } else if place == .Bread {
                 ChickenClass.breadingGN.append(num)
+            } else {
+                changeLocation(place: .nones, num: num, type: type)
             }
         }
     }
@@ -242,6 +254,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerR {
                         if each == num {
                             ChickenClass.freezerR.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -254,6 +267,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerN {
                         if each == num {
                             ChickenClass.freezerN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -266,6 +280,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerSF {
                         if each == num {
                             ChickenClass.freezerSF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -278,6 +293,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerST {
                         if each == num {
                             ChickenClass.freezerST.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -290,6 +306,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerGF {
                         if each == num {
                             ChickenClass.freezerGF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -302,6 +319,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.freezerGN {
                         if each == num {
                             ChickenClass.freezerGN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -317,6 +335,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawR {
                         if each == num {
                             ChickenClass.thawR.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -329,6 +348,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawN {
                         if each == num {
                             ChickenClass.thawN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -341,6 +361,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawSF {
                         if each == num {
                             ChickenClass.thawSF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -353,6 +374,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawST {
                         if each == num {
                             ChickenClass.thawST.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -365,6 +387,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawGF {
                         if each == num {
                             ChickenClass.thawGF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -377,6 +400,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawGN {
                         if each == num {
                             ChickenClass.thawGN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -392,6 +416,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingR {
                         if each == num {
                             ChickenClass.breadingR.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -404,6 +429,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingN {
                         if each == num {
                             ChickenClass.breadingN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -416,6 +442,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingSF {
                         if each == num {
                             ChickenClass.breadingSF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -428,6 +455,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingST {
                         if each == num {
                             ChickenClass.breadingST.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -440,6 +468,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingGF {
                         if each == num {
                             ChickenClass.breadingGF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -452,6 +481,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingGN {
                         if each == num {
                             ChickenClass.breadingGN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -467,6 +497,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedR {
                         if each == num {
                             ChickenClass.notUsedR.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -479,6 +510,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedN {
                         if each == num {
                             ChickenClass.notUsedN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -491,6 +523,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedSF {
                         if each == num {
                             ChickenClass.notUsedSF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -503,6 +536,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedST {
                         if each == num {
                             ChickenClass.notUsedST.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -515,6 +549,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedGF {
                         if each == num {
                             ChickenClass.notUsedGF.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
@@ -527,6 +562,7 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedGN {
                         if each == num {
                             ChickenClass.notUsedGN.remove(at: blah)
+                            return
                         }
                         blah+=1
                     }
