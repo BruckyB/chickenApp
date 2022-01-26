@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController3: UIViewController {
 
-    var chicken:[ChickenClass] = [ChickenClass(type: .regs, place: .Thaw, num: 9)]
+    var chicken:[ChickenClass] = []
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
     @IBOutlet weak var segController: UISegmentedControl!
@@ -133,6 +133,7 @@ class ViewController3: UIViewController {
     }
     
     func buttonThing(sender:UIButton,int:Int){
+        print(ChickenClass.undoR)
         if sender.backgroundColor == UIColor.lightGray {
             switch segController.selectedSegmentIndex {
             case 0:
@@ -142,31 +143,31 @@ class ViewController3: UIViewController {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 1:
-                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                chicken.append(ChickenClass(type: .nugs, place: .nones, num: int))
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 2:
-                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                chicken.append(ChickenClass(type: .spicy, place: .nones, num: int))
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 3:
-                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                chicken.append(ChickenClass(type: .strips, place: .nones, num: int))
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 4:
-                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                chicken.append(ChickenClass(type: .gFilets, place: .nones, num: int))
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 5:
-                chicken.append(ChickenClass(type: .regs, place: .nones, num: int))
+                chicken.append(ChickenClass(type: .gNugs, place: .nones, num: int))
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
