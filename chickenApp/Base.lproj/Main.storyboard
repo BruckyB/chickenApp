@@ -82,6 +82,7 @@
                     <navigationItem key="navigationItem" id="tUX-Zc-3EY"/>
                     <connections>
                         <segue destination="SD3-5B-G0c" kind="show" identifier="cabinetSegue" id="JAs-mF-5Gr"/>
+                        <segue destination="19L-Et-4Mw" kind="show" identifier="helpSegue" id="CAo-nr-IVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -711,13 +712,32 @@
                     <view key="view" contentMode="scaleToFill" id="ncL-cq-y6b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k6c-yo-Udb">
+                                <rect key="frame" x="20" y="174.5" width="374" height="547"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Bmj-P5-MFm"/>
+                                    <constraint firstAttribute="height" constant="547" id="JYR-98-B0v"/>
+                                </constraints>
+                                <mutableString key="text">Changing Location of Chicken:  - Select what type of chicken is being changed - Select the number corresponding with the case of chicken  Undoing Actions:  - Make sure they type of chicken that is selected and they type of chicken being undone is the same - Press the undo button until all actions are undone  Checking Date and Time of Changes:  - Move to the main screen - Press the "Logs" button - The date and time of recent changes will be displayed</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="grJ-bg-0YG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k6c-yo-Udb" firstAttribute="centerX" secondItem="ncL-cq-y6b" secondAttribute="centerX" id="aXG-RC-V91"/>
+                            <constraint firstItem="k6c-yo-Udb" firstAttribute="centerY" secondItem="ncL-cq-y6b" secondAttribute="centerY" id="cM2-Dg-ZDK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jdy-GD-1Ti"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeX-Fr-FE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="746"/>
+            <point key="canvasLocation" x="728.98550724637687" y="745.98214285714278"/>
         </scene>
         <!--View Controller4-->
         <scene sceneID="1dr-NG-ccC">
@@ -1960,6 +1980,9 @@
     </scenes>
     <resources>
         <image name="chick-fil-a" width="1640" height="734"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
