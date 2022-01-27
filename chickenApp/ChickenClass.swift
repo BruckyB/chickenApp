@@ -404,11 +404,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.thawGN {
                         if each == num {
                             ChickenClass.thawGN.remove(at: blah)
-                            
+                            ChickenClass.breadingGN.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.breadingGN.append(num)
                 }
             }
         case .Bread:
@@ -420,11 +420,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingR {
                         if each == num {
                             ChickenClass.breadingR.remove(at: blah)
-                            
+                            ChickenClass.notUsedR.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedR.append(num)
                 }
             case .nugs:
                 if ChickenClass.breadingN.contains(num) {
@@ -433,11 +433,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingN {
                         if each == num {
                             ChickenClass.breadingN.remove(at: blah)
-                            
+                            ChickenClass.notUsedN.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedN.append(num)
                 }
             case .spicy:
                 if ChickenClass.breadingSF.contains(num) {
@@ -446,11 +446,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingSF {
                         if each == num {
                             ChickenClass.breadingSF.remove(at: blah)
-                            
+                            ChickenClass.notUsedSF.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedSF.append(num)
                 }
             case .strips:
                 if ChickenClass.breadingST.contains(num) {
@@ -459,11 +459,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingST {
                         if each == num {
                             ChickenClass.breadingST.remove(at: blah)
-                            
+                            ChickenClass.notUsedST.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedST.append(num)
                 }
             case .gFilets:
                 if ChickenClass.breadingGF.contains(num) {
@@ -472,11 +472,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingGF {
                         if each == num {
                             ChickenClass.breadingGF.remove(at: blah)
-                            
+                            ChickenClass.notUsedGF.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedGF.append(num)
                 }
             case .gNugs:
                 if ChickenClass.breadingGN.contains(num) {
@@ -485,11 +485,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.breadingGN {
                         if each == num {
                             ChickenClass.breadingGN.remove(at: blah)
-                            
+                            ChickenClass.notUsedGN.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.notUsedGN.append(num)
                 }
             }
         case .nones:
@@ -501,11 +501,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedR {
                         if each == num {
                             ChickenClass.notUsedR.remove(at: blah)
-                            
+                            ChickenClass.freezerR.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerR.append(num)
                 }
             case .nugs:
                 if ChickenClass.notUsedN.contains(num) {
@@ -514,11 +514,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedN {
                         if each == num {
                             ChickenClass.notUsedN.remove(at: blah)
-                            
+                            ChickenClass.freezerN.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerN.append(num)
                 }
             case .spicy:
                 if ChickenClass.notUsedSF.contains(num) {
@@ -527,11 +527,12 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedSF {
                         if each == num {
                             ChickenClass.notUsedSF.remove(at: blah)
-                            
+                            ChickenClass.freezerSF.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerSF.append(num)
+                    
                 }
             case .strips:
                 if ChickenClass.notUsedST.contains(num) {
@@ -540,11 +541,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedST {
                         if each == num {
                             ChickenClass.notUsedST.remove(at: blah)
-                            
+                            ChickenClass.freezerST.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerST.append(num)
                 }
             case .gFilets:
                 if ChickenClass.notUsedGF.contains(num) {
@@ -553,11 +554,11 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedGF {
                         if each == num {
                             ChickenClass.notUsedGF.remove(at: blah)
-                            
+                            ChickenClass.freezerGF.append(num)
+                            return
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerGF.append(num)
                 }
             case .gNugs:
                 if ChickenClass.notUsedGN.contains(num) {
@@ -566,12 +567,12 @@ public class ChickenClass:Codable{
                     for each in ChickenClass.notUsedGN {
                         if each == num {
                             ChickenClass.notUsedGN.remove(at: blah)
-                            
+                            ChickenClass.freezerGN.append(num)
+                            return
+                            }
                         }
                         blah+=1
                     }
-                    ChickenClass.freezerGN.append(num)
-                }
                 }
         }
     }
@@ -606,6 +607,7 @@ public class ChickenClass:Codable{
                     var i = 0
                     for eachs in ChickenClass.thawR {
                         if nums == eachs {
+                            print("things")
                             ChickenClass.thawR.remove(at: i)
                             ChickenClass.freezerR.append(nums)
                             ChickenClass.undoR.removeLast()
@@ -618,6 +620,7 @@ public class ChickenClass:Codable{
                     var i = 0
                     for eachs in ChickenClass.breadingR {
                         if nums == eachs {
+                            print("cars")
                             ChickenClass.breadingR.remove(at: i)
                             ChickenClass.thawR.append(nums)
                             ChickenClass.undoR.removeLast()
