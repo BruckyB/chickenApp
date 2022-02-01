@@ -68,6 +68,7 @@
 				65731C262785DC5B00DB80D9 /* SceneDelegate.swift */,
 				65731C282785DC5B00DB80D9 /* ViewController.swift */,
 				65F77A79278DC35F00322532 /* ViewController3.swift */,
+				9C9F0921278C7788002D2299 /* ChickenClass.swift */,
 				650E00CA279AF49C0041AF39 /* HelpScreen.swift */,
 				9C9F0921278C7788002D2299 /* ChickenClass.swift */,
 				65731C2A2785DC5B00DB80D9 /* Main.storyboard */,
