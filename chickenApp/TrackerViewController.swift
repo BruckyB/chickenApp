@@ -26,7 +26,18 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
         cell.numOut.text = "Case \(1)"
-        
+        /*
+         if cimken.path = 0 {
+         cell.pathOut.text = "Left BT"
+         } else if cimken.path = 1 {
+        cell.pathOut.text = "Added To Freezer"
+         } else if cimken.path = 2 {
+         cell.pathOut.text = "Freezer -> TC"
+         } else if cimken.path = 3 {
+         cell.pathOut.text = "TC -> BT"
+         }
+         */
+         
         return cell
     }
 
