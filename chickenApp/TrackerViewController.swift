@@ -9,7 +9,7 @@ import UIKit
 
 class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    
+    var chicken:[ChickenClass] = []
     @IBOutlet weak var tableViewOut: UITableView!
     
     override func viewDidLoad() {
