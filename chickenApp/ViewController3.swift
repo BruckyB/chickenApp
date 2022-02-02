@@ -122,7 +122,7 @@ class ViewController3: UIViewController {
     }
     
     func passOver() {
-        let nvc = ViewController.self as! TrackerViewController
+        let nvc =  TrackerViewController()
         nvc.chicken = self.chicken
     }
     
