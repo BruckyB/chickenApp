@@ -26,7 +26,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
-        cell.numOut.text = "Case \(chicken[indexPath.row].numberChick)"
+        //cell.numOut.text = "Case \(chicken[indexPath.row].numberChick)"
         cell.pathOut.text = "Left BT"
         cell.pathOut.text = "Added To Freezer"
          cell.pathOut.text = "Freezer -> TC"
