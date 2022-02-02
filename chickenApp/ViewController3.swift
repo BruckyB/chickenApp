@@ -122,8 +122,7 @@ class ViewController3: UIViewController {
     }
     
     func passOver() {
-        let nvc =  TrackerViewController()
-        nvc.chicken = self.chicken
+        TrackerViewController.chicken = self.chicken
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,36 +165,42 @@ class ViewController3: UIViewController {
             switch segController.selectedSegmentIndex {
             case 0:
                 chicken.append(ChickenClass(type: .regs, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 1:
                 chicken.append(ChickenClass(type: .nugs, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 2:
                 chicken.append(ChickenClass(type: .spicy, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 3:
                 chicken.append(ChickenClass(type: .strips, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 4:
                 chicken.append(ChickenClass(type: .gFilets, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
                 }
             case 5:
                 chicken.append(ChickenClass(type: .gNugs, place: .nones, num: int, time: date))
+                passOver()
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(chicken) {
                         UserDefaults.standard.set(encoded, forKey: "SDATA")
@@ -209,36 +214,42 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         chickens.changeLocation(place: .nones, num: int, type: .regs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 1:
                         chickens.changeLocation(place: .nones, num: int, type: .nugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 2:
                         chickens.changeLocation(place: .nones, num: int, type: .spicy, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 3:
                         chickens.changeLocation(place: .nones, num: int, type: .strips, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 4:
                         chickens.changeLocation(place: .nones, num: int, type: .gFilets, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 5:
                         chickens.changeLocation(place: .nones, num: int, type: .gNugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
@@ -256,36 +267,42 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         chickens.changeLocation(place: .Freezer, num: int, type: .regs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 1:
                         chickens.changeLocation(place: .Freezer, num: int, type: .nugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 2:
                         chickens.changeLocation(place: .Freezer, num: int, type: .spicy, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 3:
                         chickens.changeLocation(place: .Freezer, num: int, type: .strips, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 4:
                         chickens.changeLocation(place: .Freezer, num: int, type: .gFilets, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 5:
                         chickens.changeLocation(place: .Freezer, num: int, type: .gNugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
@@ -303,36 +320,42 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         chickens.changeLocation(place: .Thaw, num: int, type: .regs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 1:
                         chickens.changeLocation(place: .Thaw, num: int, type: .nugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 2:
                         chickens.changeLocation(place: .Thaw, num: int, type: .spicy, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 3:
                         chickens.changeLocation(place: .Thaw, num: int, type: .strips, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 4:
                         chickens.changeLocation(place: .Thaw, num: int, type: .gFilets, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 5:
                         chickens.changeLocation(place: .Thaw, num: int, type: .gNugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
@@ -350,36 +373,42 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         chickens.changeLocation(place: .Bread, num: int, type: .regs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 1:
                         chickens.changeLocation(place: .Bread, num: int, type: .nugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 2:
                         chickens.changeLocation(place: .Bread, num: int, type: .spicy, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 3:
                         chickens.changeLocation(place: .Bread, num: int, type: .strips, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 4:
                         chickens.changeLocation(place: .Bread, num: int, type: .gFilets, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 5:
                         chickens.changeLocation(place: .Bread, num: int, type: .gNugs, nTime: date)
+                        passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
@@ -390,7 +419,6 @@ class ViewController3: UIViewController {
                 }
             }
         }
-        passOver()
     }
     
     func diffrentColor(types:ChickenT){
