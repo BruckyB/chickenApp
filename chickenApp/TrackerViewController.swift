@@ -9,7 +9,7 @@ import UIKit
 
 class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    
+    var chicken:[ChickenClass] = []
     @IBOutlet weak var tableViewOut: UITableView!
     
     override func viewDidLoad() {
@@ -26,21 +26,12 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
-        cell.numOut.text = "Case \(1)"
-        cell.pathOut.text = "suck it"
-        /*
-         if cimken.path = 0 {
-         cell.pathOut.text = "Left BT"
-         } else if cimken.path = 1 {
+        cell.numOut.text = "Case \(chicken[indexPath.row].numberChick)"
+        cell.pathOut.text = "Left BT"
         cell.pathOut.text = "Added To Freezer"
-         } else if cimken.path = 2 {
          cell.pathOut.text = "Freezer -> TC"
-         } else if cimken.path = 3 {
          cell.pathOut.text = "TC -> BT"
-         }
-         */
-        cell.timeOut.text = "whatever the time is"
-        cell.dateOut.text = "today i guess"
+
          
         return cell
     }

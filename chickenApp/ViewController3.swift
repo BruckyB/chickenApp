@@ -121,6 +121,11 @@ class ViewController3: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func passOver() {
+        let nvc =  TrackerViewController()
+        nvc.chicken = self.chicken
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         let hour = calendar.component(.hour, from: date)
@@ -385,6 +390,7 @@ class ViewController3: UIViewController {
                 }
             }
         }
+        passOver()
     }
     
     func diffrentColor(types:ChickenT){
