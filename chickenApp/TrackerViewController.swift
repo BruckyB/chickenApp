@@ -14,7 +14,8 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableViewOut.delegate = self
+        tableViewOut.dataSource = self
         
     }
     
@@ -26,6 +27,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
         cell.numOut.text = "Case \(1)"
+        cell.pathOut.text = "suck it"
         /*
          if cimken.path = 0 {
          cell.pathOut.text = "Left BT"
@@ -37,6 +39,8 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
          cell.pathOut.text = "TC -> BT"
          }
          */
+        cell.timeOut.text = "whatever the time is"
+        cell.dateOut.text = "today i guess"
          
         return cell
     }
