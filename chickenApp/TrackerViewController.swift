@@ -17,12 +17,28 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         tableViewOut.delegate = self
         tableViewOut.dataSource = self
-        
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            if let item  = UserDefaults.standard.data(forKey: "SDATA2"){
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([ChickenClass].self, from: item){
+            TrackerViewController.chicken = decoded
+            }
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(TrackerViewController.chicken) {
+                UserDefaults.standard.set(encoded, forKey: "SDATA2")
+        }
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return TrackerViewController.chicken.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

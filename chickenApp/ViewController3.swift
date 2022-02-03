@@ -157,6 +157,7 @@ class ViewController3: UIViewController {
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
         print("\(hour):\(minute):\(second) \(day)/\(month)/\(year)")
+        passOver()
         }
     
     func buttonThing(sender:UIButton,int:Int){
