@@ -12,6 +12,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
      static var chicken:[ChickenClass] = []
     @IBOutlet weak var tableViewOut: UITableView!
     let calendar = Calendar.current
+    var place:placeT = .nones
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
         let date = TrackerViewController.chicken[indexPath.row].time.last
-        
+        place = TrackerViewController.chicken[indexPath.row].place
         let hour = calendar.component(.hour, from: date!)
         let minute = calendar.component(.minute, from: date!)
         let second = calendar.component(.second, from: date!)
@@ -72,14 +73,22 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.timeOut.text = cell.timeOut.text! + "\(second)"
             //cell.timeOut.text = "\(hour):\(minute):\(second)"
         }
+        switch  place {
+                case .nones:
+                cell.pathOut.text = " BT -> \(TrackerViewController.chicken[indexPath.row].place)"
+                case .Freezer:
+                cell.pathOut.text = " N/A -> \(TrackerViewController.chicken[indexPath.row].place)"
+                case .Thaw:
+                cell.pathOut.text = " F -> \(TrackerViewController.chicken[indexPath.row].place)"
+                case .Bread:
+                cell.pathOut.text = " T -> \(TrackerViewController.chicken[indexPath.row].place)"
+            }
         cell.numOut.text = "Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-         cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-         cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
+//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
+//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
+//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
+//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
         cell.dateOut.text = " \(month)/\(day)/\(year)"
-        
-
         return cell
     }
 
