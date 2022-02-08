@@ -695,7 +695,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thaw Cabinet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Don-b9-FzX">
                                 <rect key="frame" x="263" y="763" width="105" height="21"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VMI-V4-8Lh"/>
                                 </constraints>
@@ -705,7 +705,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breading Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-e2-1Gp">
                                 <rect key="frame" x="254.5" y="802" width="113.5" height="21"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="KRh-uV-PrJ"/>
                                 </constraints>
@@ -733,6 +733,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="998-tD-hQT">
+                                <rect key="frame" x="132" y="646" width="150" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveOut:" destination="SD3-5B-G0c" eventType="touchUpInside" id="cVC-2S-jD1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yWz-Iy-f0N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -805,6 +814,7 @@
                         <outlet property="b7" destination="v2m-kW-xJX" id="lKx-ZY-MkZ"/>
                         <outlet property="b8" destination="AZY-73-ONU" id="2JE-cT-deh"/>
                         <outlet property="b9" destination="FwH-3H-WDK" id="jgL-kb-O0Z"/>
+                        <outlet property="saveButton" destination="998-tD-hQT" id="BjL-Di-3OG"/>
                         <outlet property="segController" destination="n3h-ik-EUp" id="ouS-gH-oyZ"/>
                     </connections>
                 </viewController>

@@ -9,7 +9,8 @@ import UIKit
 import CloudKit
 
 class ViewController3: UIViewController {
-
+    @IBOutlet weak var saveButton: UIButton!
+    
     var chicken:[ChickenClass] = []
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
@@ -399,7 +400,7 @@ class ViewController3: UIViewController {
                     case 0:
                         print("q")
                         //chickens.changeLocation(place: .Bread, num: int, type: .regs, nTime: date)
-                        chicken.append(ChickenClass(type: .regs, place: .nonesXXQ, num: int, time: date))
+                        chicken.append(ChickenClass(type: .regs, place: .nones, num: int, time: date))
                         passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
@@ -687,6 +688,14 @@ class ViewController3: UIViewController {
     @IBAction func b50(_ sender: UIButton) {
         buttonThing(sender: sender,int: 50)
     }
+    
+    @IBAction func saveOut(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
 }
 
 
