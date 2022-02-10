@@ -13,7 +13,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var tableViewOut: UITableView!
     let calendar = Calendar.current
     var place:placeT = .nones
-    
+    var type:ChickenT = .regs
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOut.delegate = self
@@ -46,6 +46,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
         let date = TrackerViewController.chicken[indexPath.row].time.last
         place = TrackerViewController.chicken[indexPath.row].place
+        type = TrackerViewController.chicken[indexPath.row].type
         let hour = calendar.component(.hour, from: date!)
         let minute = calendar.component(.minute, from: date!)
         let second = calendar.component(.second, from: date!)
@@ -83,7 +84,22 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 case .Bread:
                 cell.pathOut.text = " T -> \(TrackerViewController.chicken[indexPath.row].place)"
             }
-        cell.numOut.text = "Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        switch type {
+        case .regs:
+            cell.numOut.text = "Regs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        case .nugs:
+            cell.numOut.text = "Nugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        case .spicy:
+            cell.numOut.text = "Spicy Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        case .strips:
+            cell.numOut.text = "Strips Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        case .gNugs:
+            cell.numOut.text = "GNugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        case .gFilets:
+            cell.numOut.text = "GFilets Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+        }
+        
+        
 //        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
 //        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
 //        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
