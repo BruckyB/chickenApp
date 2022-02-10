@@ -366,7 +366,7 @@ public class ChickenClass:Codable{
                         ChickenClass.freezerGN.remove(at: i)
                         break
                     }
-                    i +=m 1
+                    i += 1
                 }
                 ChickenClass.thawGN.append(num)
             } else if place == .Bread {
