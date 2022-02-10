@@ -118,63 +118,233 @@ public class ChickenClass:Codable{
         switch type {
         case .regs:
             if place == .Freezer {
+                var i = 0
+                for each in ChickenClass.notUsedR {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedR.remove(at: i)
+                        break
+                    }
+                    i+=1
+                }
                 ChickenClass.freezerR.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerR {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerR.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawR.append(num)
             } else if place == .Bread {
+                for each in ChickenClass.thawR {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawR.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingR.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingR {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingR.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedR.append(num)
             }
         case .nugs:
             if place == .Freezer {
+                for each in ChickenClass.notUsedN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.freezerN.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawN.append(num)
             } else if place == .Bread{
+                for each in ChickenClass.thawN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingN.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingN.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedN.append(num)
             }
         case .spicy:
             if place == .Freezer {
+                for each in ChickenClass.notUsedSF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedSF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.freezerSF.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerSF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerSF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawSF.append(num)
             } else if place == .Bread{
+                for each in ChickenClass.thawSF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawSF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingSF.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingSF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingSF.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedSF.append(num)
             }
         case .strips:
             if place == .Freezer {
+                for each in ChickenClass.notUsedST {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedST.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.freezerST.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerST {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerST.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawST.append(num)
             } else if place == .Bread {
+                for each in ChickenClass.thawST {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawST.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingST.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingST {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingST.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedST.append(num)
             }
         case .gFilets:
             if place == .Freezer {
+                for each in ChickenClass.notUsedGF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedGF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.freezerGF.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerGF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerGF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawGF.append(num)
             } else if place == .Bread{
+                for each in ChickenClass.thawGF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawGF.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingGF.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingGF {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingGF.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedGF.append(num)
             }
         case .gNugs:
             if place == .Freezer {
+                for each in ChickenClass.notUsedGN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.notUsedGN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.freezerGN.append(num)
             } else if place == .Thaw {
+                for each in ChickenClass.freezerGN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.freezerGN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.thawGN.append(num)
             } else if place == .Bread {
+                for each in ChickenClass.thawGN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.thawGN.remove(at: each-1)
+                        break
+                    }
+                }
                 ChickenClass.breadingGN.append(num)
             } else {
-                changeLocation(place: .nones, num: num, type: type, nTime: time)
+                for each in ChickenClass.breadingGN {
+                    if each == num {
+                        ChickenClass.undoR.append((place,num))
+                        ChickenClass.breadingGN.remove(at: each-1)
+                        break
+                    }
+                }
+                ChickenClass.notUsedGN.append(num)
             }
         }
     }
@@ -1010,67 +1180,65 @@ public class ChickenClass:Codable{
     func colorChange(button:UIButton,type:ChickenT){
         switch type {
         case .regs:
-            if ChickenClass.freezerR.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawR.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedR.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingR.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawR.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         case .nugs:
-            if ChickenClass.freezerN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingN.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         case .spicy:
-            if ChickenClass.freezerSF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawSF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedSF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingSF.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawSF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         case .strips:
-            if ChickenClass.freezerST.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawST.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedST.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingST.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawST.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         case .gFilets:
-            if ChickenClass.freezerGF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawGF.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedGF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingGF.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawGF.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         case .gNugs:
-            if ChickenClass.freezerGN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.cyan
-            } else if ChickenClass.thawGN.contains(Int(button.titleLabel!.text!)!){
-                button.backgroundColor = UIColor.yellow
+            if ChickenClass.notUsedGN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.lightGray
             } else if ChickenClass.breadingGN.contains(Int(button.titleLabel!.text!)!){
                 button.backgroundColor = UIColor.green
+            } else if ChickenClass.thawGN.contains(Int(button.titleLabel!.text!)!){
+                button.backgroundColor = UIColor.yellow
             } else {
-                button.backgroundColor = UIColor.lightGray
+                button.backgroundColor = UIColor.cyan
             }
         }
     }
-    
-    
 }

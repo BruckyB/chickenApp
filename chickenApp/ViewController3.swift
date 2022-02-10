@@ -10,7 +10,6 @@ import CloudKit
 
 class ViewController3: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
-    
     var chicken:[ChickenClass] = []
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
@@ -158,8 +157,6 @@ class ViewController3: UIViewController {
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
-        print("\(hour):\(minute):\(second) \(day)/\(month)/\(year)")
-        
         passOver()
         }
     
@@ -169,29 +166,26 @@ class ViewController3: UIViewController {
             sender.backgroundColor = UIColor.cyan
             switch segController.selectedSegmentIndex {
             case 0:
-                chicken.append(ChickenClass(type: .regs, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
-               
             case 1:
-                chicken.append(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 2:
-                chicken.append(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                
             case 3:
-                chicken.append(ChickenClass(type: .strips, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 4:
-                chicken.append(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
-                
             case 5:
-                chicken.append(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date))
+                chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
-                
             default:
                 return
             }
@@ -200,7 +194,7 @@ class ViewController3: UIViewController {
 //                    switch segController.selectedSegmentIndex {
 //                    case 0:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .regs, nTime: date)
-//                        //chicken.append(ChickenClass(type: .regs, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -208,7 +202,7 @@ class ViewController3: UIViewController {
 //                        }
 //                    case 1:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .nugs, nTime: date)
-//                        //chicken.append(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -216,7 +210,7 @@ class ViewController3: UIViewController {
 //                        }
 //                    case 2:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .spicy, nTime: date)
-//                        //chicken.append(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -224,7 +218,7 @@ class ViewController3: UIViewController {
 //                        }
 //                    case 3:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .strips, nTime: date)
-//                        //chicken.append(ChickenClass(type: .strips, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -232,7 +226,7 @@ class ViewController3: UIViewController {
 //                        }
 //                    case 4:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .gFilets, nTime: date)
-//                        //chicken.append(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -240,7 +234,7 @@ class ViewController3: UIViewController {
 //                        }
 //                    case 5:
 //                        //chickens.changeLocation(place: .nones, num: int, type: .gNugs, nTime: date)
-//                        //chicken.append(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date))
+//                        //chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date))
 //                        passOver()
 //                        let encoder = JSONEncoder()
 //                        if let encoded = try? encoder.encode(chicken) {
@@ -259,19 +253,19 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .regs, nTime: date)
-                        chicken.append(ChickenClass(type: .regs, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
-                        
+                    
                     case 1:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .nugs, nTime: date)
-                        chicken.append(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                         
                     case 2:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .spicy, nTime: date)
-                        chicken.append(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         let encoder = JSONEncoder()
                         if let encoded = try? encoder.encode(chicken) {
@@ -279,17 +273,17 @@ class ViewController3: UIViewController {
                         }
                     case 3:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .strips, nTime: date)
-                        chicken.append(ChickenClass(type: .strips, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .gFilets, nTime: date)
-                        chicken.append(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         //chickens.changeLocation(place: .Freezer, num: int, type: .gNugs, nTime: date)
-                        chicken.append(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -305,32 +299,32 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .regs, nTime: date)
-                        chicken.append(ChickenClass(type: .regs, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 1:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .nugs, nTime: date)
-                        chicken.append(ChickenClass(type: .nugs, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .spicy, nTime: date)
-                        chicken.append(ChickenClass(type: .spicy, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .strips, nTime: date)
-                        chicken.append(ChickenClass(type: .strips, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .gFilets, nTime: date)
-                        chicken.append(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         //chickens.changeLocation(place: .Thaw, num: int, type: .gNugs, nTime: date)
-                        chicken.append(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -347,32 +341,32 @@ class ViewController3: UIViewController {
                     case 0:
                         print("q")
                         //chickens.changeLocation(place: .Bread, num: int, type: .regs, nTime: date)
-                        chicken.append(ChickenClass(type: .regs, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                        
                     case 1:
                         //chickens.changeLocation(place: .Bread, num: int, type: .nugs, nTime: date)
-                        chicken.append(ChickenClass(type: .nugs, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
                         //chickens.changeLocation(place: .Bread, num: int, type: .spicy, nTime: date)
-                        chicken.append(ChickenClass(type: .spicy, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
                         //chickens.changeLocation(place: .Bread, num: int, type: .strips, nTime: date)
-                        chicken.append(ChickenClass(type: .strips, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         //chickens.changeLocation(place: .Bread, num: int, type: .gFilets, nTime: date)
-                        chicken.append(ChickenClass(type: .gFilets, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         //chickens.changeLocation(place: .Bread, num: int, type: .gNugs, nTime: date)
-                        chicken.append(ChickenClass(type: .gNugs, place: .nones, num: int, time: date))
+                        chicken.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -419,53 +413,41 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func undo(_ sender : UIButton){
-    switch segController.selectedSegmentIndex {
-    case 0:
-        chicken.first!.undoLocation(type: .regs)
-        diffrentColor(types: .regs)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
+        switch segController.selectedSegmentIndex {
+        case 0:
+            chicken.first!.undoLocation(type: .regs)
+            chicken.removeFirst()
+            diffrentColor(types: .regs)
+            passOver()
+        case 1:
+            chicken.first!.undoLocation(type: .nugs)
+            chicken.removeFirst()
+            diffrentColor(types: .nugs)
+            passOver()
+        case 2:
+            chicken.first!.undoLocation(type: .spicy)
+            chicken.removeFirst()
+            diffrentColor(types: .spicy)
+            passOver()
+        case 3:
+            chicken.first!.undoLocation(type: .strips)
+            chicken.removeFirst()
+            diffrentColor(types: .strips)
+            passOver()
+        case 4:
+            chicken.first!.undoLocation(type: .gFilets)
+            chicken.removeFirst()
+            diffrentColor(types: .gFilets)
+            passOver()
+        case 5:
+            chicken.first!.undoLocation(type: .gNugs)
+            chicken.removeFirst()
+            diffrentColor(types: .gNugs)
+            passOver()
+        default:
+            return
+            }
         }
-    case 1:
-        chicken.first!.undoLocation(type: .nugs)
-        diffrentColor(types: .nugs)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
-        }
-    case 2:
-        chicken.first!.undoLocation(type: .spicy)
-        diffrentColor(types: .spicy)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
-        }
-    case 3:
-        chicken.first!.undoLocation(type: .strips)
-        diffrentColor(types: .strips)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
-        }
-    case 4:
-        chicken.first!.undoLocation(type: .gFilets)
-        diffrentColor(types: .gFilets)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
-        }
-    case 5:
-        chicken.first!.undoLocation(type: .gNugs)
-        diffrentColor(types: .gNugs)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA")
-        }
-    default:
-        return
-        }
-    }
     
     @IBAction func b1(_ sender: UIButton) {
         buttonThing(sender: sender,int: 1)
@@ -619,9 +601,11 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func saveOut(_ sender: Any) {
-        
-        
-        
+        let encoder = JSONEncoder()
+        chicken.removeAll()
+        if let encoded = try? encoder.encode(chicken) {
+                UserDefaults.standard.set(encoded, forKey: "SDATA")
+        }
     }
     
     
