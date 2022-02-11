@@ -85,18 +85,18 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 cell.pathOut.text = " T -> \(TrackerViewController.chicken[indexPath.row].place)"
             }
         switch type {
-        case .regs:
-            cell.numOut.text = "Regs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        case .nugs:
-            cell.numOut.text = "Nugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        case .spicy:
-            cell.numOut.text = "Spicy Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        case .strips:
-            cell.numOut.text = "Strips Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        case .gNugs:
-            cell.numOut.text = "GNugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
-        case .gFilets:
-            cell.numOut.text = "GFilets Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .regs:
+                cell.numOut.text = "Regs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .nugs:
+                cell.numOut.text = "Nugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .spicy:
+                cell.numOut.text = "Spicy Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .strips:
+                cell.numOut.text = "Strips Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .gNugs:
+                cell.numOut.text = "GNugs Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
+            case .gFilets:
+                cell.numOut.text = "GFilets Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
         }
         
         
