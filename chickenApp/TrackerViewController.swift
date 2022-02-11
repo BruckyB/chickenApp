@@ -98,12 +98,6 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
             case .gFilets:
                 cell.numOut.text = "GFilets Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
         }
-        
-        
-//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
-//        cell.pathOut.text = "\(TrackerViewController.chicken[indexPath.row].place)"
         cell.dateOut.text = " \(month)/\(day)/\(year)"
         return cell
     }

@@ -119,7 +119,6 @@ class ViewController3: UIViewController {
         buttonArray.append(b48)
         buttonArray.append(b49)
         buttonArray.append(b50)
-        // Do any additional setup after loading the view.
     }
     
     func passOver() {
@@ -161,7 +160,6 @@ class ViewController3: UIViewController {
         }
     
     func buttonThing(sender:UIButton,int:Int){
-        print(ChickenClass.undoR)
         if sender.backgroundColor == UIColor.lightGray {
             sender.backgroundColor = UIColor.cyan
             switch segController.selectedSegmentIndex {
@@ -189,62 +187,6 @@ class ViewController3: UIViewController {
             default:
                 return
             }
-//            for chickens in chicken {
-//                if chickens.numberChick == int{
-//                    switch segController.selectedSegmentIndex {
-//                    case 0:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .regs, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    case 1:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .nugs, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    case 2:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .spicy, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    case 3:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .strips, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    case 4:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .gFilets, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    case 5:
-//                        //chickens.changeLocation(place: .nones, num: int, type: .gNugs, nTime: date)
-//                        //chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date))
-//                        passOver()
-//                        let encoder = JSONEncoder()
-//                        if let encoded = try? encoder.encode(chicken) {
-//                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-//                        }
-//                    default:
-//                        return
-//                    }
-//                }
-//            }
         }
         else if sender.backgroundColor == UIColor.cyan {
             sender.backgroundColor = UIColor.yellow
@@ -252,19 +194,16 @@ class ViewController3: UIViewController {
                 if chickens.numberChick == int{
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .regs, nTime: date)
                         chicken.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     
                     case 1:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .nugs, nTime: date)
                         chicken.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                         
                     case 2:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .spicy, nTime: date)
                         chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         let encoder = JSONEncoder()
@@ -272,17 +211,14 @@ class ViewController3: UIViewController {
                                 UserDefaults.standard.set(encoded, forKey: "SDATA")
                         }
                     case 3:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .strips, nTime: date)
                         chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .gFilets, nTime: date)
                         chicken.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        //chickens.changeLocation(place: .Freezer, num: int, type: .gNugs, nTime: date)
                         chicken.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
@@ -294,86 +230,65 @@ class ViewController3: UIViewController {
         }
         else if sender.backgroundColor == UIColor.yellow {
             sender.backgroundColor = UIColor.green
-            //for chickens in chicken {
-                //if chickens.numberChick == int {
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .regs, nTime: date)
                         chicken.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 1:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .nugs, nTime: date)
                         chicken.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .spicy, nTime: date)
                         chicken.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .strips, nTime: date)
                         chicken.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .gFilets, nTime: date)
                         chicken.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        //chickens.changeLocation(place: .Thaw, num: int, type: .gNugs, nTime: date)
                         chicken.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
                         return
                     }
-            //    }
-          //  }
         }
         else if sender.backgroundColor == UIColor.green {
             sender.backgroundColor = UIColor.lightGray
-           // for chickens in chicken {
-             //   if chickens.numberChick == int{
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        print("q")
-                        //chickens.changeLocation(place: .Bread, num: int, type: .regs, nTime: date)
                         chicken.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                        
                     case 1:
-                        //chickens.changeLocation(place: .Bread, num: int, type: .nugs, nTime: date)
                         chicken.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
-                        //chickens.changeLocation(place: .Bread, num: int, type: .spicy, nTime: date)
                         chicken.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
-                        //chickens.changeLocation(place: .Bread, num: int, type: .strips, nTime: date)
                         chicken.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        //chickens.changeLocation(place: .Bread, num: int, type: .gFilets, nTime: date)
                         chicken.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        //chickens.changeLocation(place: .Bread, num: int, type: .gNugs, nTime: date)
                         chicken.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
                         return
-                    }
-            //    }
-          //  }
+                }
         }
     }
     
@@ -415,33 +330,27 @@ class ViewController3: UIViewController {
     @IBAction func undo(_ sender : UIButton){
         switch segController.selectedSegmentIndex {
         case 0:
-            chicken.first!.undoLocation(type: .regs)
-            chicken.removeFirst()
+            chicken = chicken.last!.undoLocation(type: .regs, crit: chicken)
             diffrentColor(types: .regs)
             passOver()
         case 1:
-            chicken.first!.undoLocation(type: .nugs)
-            chicken.removeFirst()
+            chicken = chicken.first!.undoLocation(type: .nugs, crit: chicken)
             diffrentColor(types: .nugs)
             passOver()
         case 2:
-            chicken.first!.undoLocation(type: .spicy)
-            chicken.removeFirst()
+            chicken = chicken.first!.undoLocation(type: .spicy, crit: chicken)
             diffrentColor(types: .spicy)
             passOver()
         case 3:
-            chicken.first!.undoLocation(type: .strips)
-            chicken.removeFirst()
+            chicken = chicken.first!.undoLocation(type: .strips, crit: chicken)
             diffrentColor(types: .strips)
             passOver()
         case 4:
-            chicken.first!.undoLocation(type: .gFilets)
-            chicken.removeFirst()
+            chicken = chicken.first!.undoLocation(type: .gFilets, crit: chicken)
             diffrentColor(types: .gFilets)
             passOver()
         case 5:
-            chicken.first!.undoLocation(type: .gNugs)
-            chicken.removeFirst()
+            chicken = chicken.first!.undoLocation(type: .gNugs, crit: chicken)
             diffrentColor(types: .gNugs)
             passOver()
         default:
@@ -601,8 +510,10 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func saveOut(_ sender: Any) {
+        print(chicken)
+        print(ChickenClass.undoR)
         let encoder = JSONEncoder()
-        chicken.removeAll()
+        //chicken.removeAll()
         if let encoded = try? encoder.encode(chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }
