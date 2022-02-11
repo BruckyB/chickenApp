@@ -509,7 +509,7 @@ class ViewController3: UIViewController {
         print(chicken)
         print(ChickenClass.undoR)
         let encoder = JSONEncoder()
-        //chicken.removeAll()
+        chicken.removeAll()
         if let encoded = try? encoder.encode(chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }

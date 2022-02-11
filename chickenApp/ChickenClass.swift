@@ -1086,7 +1086,7 @@ public class ChickenClass:Codable{
                             self.place = .nones
                             ChickenClass.notUsedST.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.freezerST.append(nums)
+                            ChickenClass.breadingST.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1101,7 +1101,7 @@ public class ChickenClass:Codable{
                             self.place = .Freezer
                             ChickenClass.freezerST.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.thawST.append(nums)
+                            ChickenClass.notUsedST.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1116,7 +1116,7 @@ public class ChickenClass:Codable{
                             self.place = .Thaw
                             ChickenClass.thawST.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.breadingST.append(nums)
+                            ChickenClass.freezerST.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1131,7 +1131,7 @@ public class ChickenClass:Codable{
                             self.place = .Bread
                             ChickenClass.breadingST.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.notUsedST.append(nums)
+                            ChickenClass.thawST.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1152,7 +1152,7 @@ public class ChickenClass:Codable{
                             self.place = .nones
                             ChickenClass.notUsedGF.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.freezerGF.append(nums)
+                            ChickenClass.breadingGF.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1167,7 +1167,7 @@ public class ChickenClass:Codable{
                             self.place = .Freezer
                             ChickenClass.freezerGF.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.thawGF.append(nums)
+                            ChickenClass.notUsedGF.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1182,7 +1182,7 @@ public class ChickenClass:Codable{
                             self.place = .Thaw
                             ChickenClass.thawGF.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.breadingGF.append(nums)
+                            ChickenClass.freezerGF.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1197,7 +1197,7 @@ public class ChickenClass:Codable{
                             self.place = .Bread
                             ChickenClass.breadingGF.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.notUsedGF.append(nums)
+                            ChickenClass.thawGF.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1218,7 +1218,7 @@ public class ChickenClass:Codable{
                             self.place = .nones
                             ChickenClass.notUsedGN.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.freezerGN.append(nums)
+                            ChickenClass.breadingGN.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1233,7 +1233,7 @@ public class ChickenClass:Codable{
                             self.place = .Freezer
                             ChickenClass.freezerGN.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.thawGN.append(nums)
+                            ChickenClass.notUsedGN.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1248,7 +1248,7 @@ public class ChickenClass:Codable{
                             self.place = .Thaw
                             ChickenClass.thawGN.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.breadingGN.append(nums)
+                            ChickenClass.freezerGN.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
@@ -1263,7 +1263,7 @@ public class ChickenClass:Codable{
                             self.place = .Bread
                             ChickenClass.breadingGN.remove(at: i)
                             crit2.removeFirst()
-                            ChickenClass.notUsedGN.append(nums)
+                            ChickenClass.thawGN.append(nums)
                             ChickenClass.undoR.removeLast()
                             
                             return crit2
