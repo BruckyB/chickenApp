@@ -24,5 +24,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "tracka", sender: nil)
     }
     
+    @IBAction func hButton(_ sender: Any) {
+        performSegue(withIdentifier: "helpSegue", sender: nil)
+    }
 }
 

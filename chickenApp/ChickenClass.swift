@@ -873,9 +873,8 @@ public class ChickenClass:Codable{
                             self.place = .nones
                             ChickenClass.notUsedR.remove(at: i)
                             ChickenClass.breadingR.append(nums)
-                            time.removeLast()
                             ChickenClass.undoR.removeLast()
-                            return
+                            return crit2
                         }
                         i += 1
                     }
@@ -957,8 +956,8 @@ public class ChickenClass:Codable{
                             ChickenClass.notUsedN.remove(at: i)
                             ChickenClass.breadingN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }

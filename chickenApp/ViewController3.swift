@@ -206,10 +206,6 @@ class ViewController3: UIViewController {
                     case 2:
                         chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
-                        let encoder = JSONEncoder()
-                        if let encoded = try? encoder.encode(chicken) {
-                                UserDefaults.standard.set(encoded, forKey: "SDATA")
-                        }
                     case 3:
                         chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
