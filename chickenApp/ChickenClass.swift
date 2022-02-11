@@ -841,9 +841,10 @@ public class ChickenClass:Codable{
         }
     }
     
-    func undoLocation(type:ChickenT){
+    func undoLocation(type:ChickenT,crit:[ChickenClass]) -> [ChickenClass] {
         print("undo func")
         print(ChickenClass.undoR)
+        var crit2 = crit
         switch type {
         case .regs:
             if ChickenClass.undoR.isEmpty {}
@@ -852,58 +853,59 @@ public class ChickenClass:Codable{
            let  nums = ChickenClass.undoR.last!.nums
                 if place == .nones {
                     var i = 0
-                    for eachs in ChickenClass.freezerR {
+                    for eachs in ChickenClass.notUsedR {
                         if nums == eachs {
                             self.place = .nones
-                            ChickenClass.freezerR.remove(at: i)
-                            ChickenClass.notUsedR.append(nums)
-                            time.removeLast()
+                            ChickenClass.notUsedR.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.breadingR.append(nums)
+                            
                             ChickenClass.undoR.removeLast()
-                            return
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Freezer {
                     var i = 0
-                    for eachs in ChickenClass.thawR {
+                    for eachs in ChickenClass.freezerR {
                         if nums == eachs {
-                            print("things")
                             self.place = .Freezer
-                            ChickenClass.thawR.remove(at: i)
-                            ChickenClass.freezerR.append(nums)
+                            ChickenClass.freezerR.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.notUsedR.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Thaw {
                     var i = 0
-                    for eachs in ChickenClass.breadingR {
+                    for eachs in ChickenClass.thawR {
                         if nums == eachs {
-                            print("cars")
                             self.place = .Thaw
-                            ChickenClass.breadingR.remove(at: i)
-                            ChickenClass.thawR.append(nums)
+                            ChickenClass.thawR.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.freezerR.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return  crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Bread {
                     var i = 0
-                    for eachs in ChickenClass.notUsedR {
+                    for eachs in ChickenClass.breadingR {
                         if nums == eachs {
                             self.place = .Bread
-                            ChickenClass.notUsedR.remove(at: i)
-                            ChickenClass.breadingR.append(nums)
+                            ChickenClass.breadingR.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.thawR.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
@@ -916,57 +918,61 @@ public class ChickenClass:Codable{
             let  nums = ChickenClass.undoR.last!.nums
                 if place == .nones {
                     var i = 0
-                    for eachs in ChickenClass.freezerN {
+                    for eachs in ChickenClass.notUsedN {
                         if nums == eachs {
                             print("sdfghj")
                             self.place = .nones
-                            ChickenClass.freezerN.remove(at: i)
-                            ChickenClass.notUsedN.append(nums)
+                            ChickenClass.notUsedN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.breadingN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Freezer {
                     var i = 0
-                    for eachs in ChickenClass.thawN {
+                    for eachs in ChickenClass.freezerN {
                         if nums == eachs {
                             self.place = .Freezer
-                            ChickenClass.thawN.remove(at: i)
-                            ChickenClass.freezerN.append(nums)
+                            ChickenClass.freezerN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.notUsedN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Thaw {
                     var i = 0
-                    for eachs in ChickenClass.breadingN {
+                    for eachs in ChickenClass.thawN {
                         if nums == eachs {
                             self.place = .Thaw
-                            ChickenClass.breadingN.remove(at: i)
-                            ChickenClass.thawN.append(nums)
+                            ChickenClass.thawN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.freezerN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Bread {
                     var i = 0
-                    for eachs in ChickenClass.notUsedN {
+                    for eachs in ChickenClass.breadingN {
                         if nums == eachs {
                             self.place = .Bread
-                            ChickenClass.notUsedN.remove(at: i)
-                            ChickenClass.breadingN.append(nums)
+                            ChickenClass.breadingN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.thawN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
@@ -979,56 +985,60 @@ public class ChickenClass:Codable{
             let  nums = ChickenClass.undoR.last!.nums
                     if place == .nones {
                         var i = 0
-                        for eachs in ChickenClass.freezerSF {
+                        for eachs in ChickenClass.notUsedSF {
                             if nums == eachs {
                                 self.place = .nones
-                                ChickenClass.freezerSF.remove(at: i)
-                                ChickenClass.notUsedSF.append(nums)
+                                ChickenClass.notUsedSF.remove(at: i)
+                                crit2.removeFirst()
+                                ChickenClass.breadingSF.append(nums)
                                 ChickenClass.undoR.removeLast()
-                                time.removeLast()
-                                return
+                                
+                                return crit2
                             }
                             i += 1
                         }
                     }
                     if place == .Freezer {
                         var i = 0
-                        for eachs in ChickenClass.thawSF {
+                        for eachs in ChickenClass.freezerSF {
                             if nums == eachs {
                                 self.place = .Freezer
-                                ChickenClass.thawSF.remove(at: i)
-                                ChickenClass.freezerSF.append(nums)
+                                ChickenClass.freezerSF.remove(at: i)
+                                crit2.removeFirst()
+                                ChickenClass.notUsedSF.append(nums)
                                 ChickenClass.undoR.removeLast()
-                                time.removeLast()
-                                return
+                                
+                                return crit2
                             }
                             i += 1
                         }
                     }
                     if place == .Thaw {
                         var i = 0
-                        for eachs in ChickenClass.breadingSF {
+                        for eachs in ChickenClass.thawSF {
                             if nums == eachs {
                                 self.place = .Thaw
-                                ChickenClass.breadingSF.remove(at: i)
-                                ChickenClass.thawSF.append(nums)
+                                ChickenClass.thawSF.remove(at: i)
+                                crit2.removeFirst()
+                                ChickenClass.freezerSF.append(nums)
                                 ChickenClass.undoR.removeLast()
-                                time.removeLast()
-                                return
+                                
+                                return crit2
                             }
                             i += 1
                         }
                     }
                     if place == .Bread {
                         var i = 0
-                        for eachs in ChickenClass.notUsedSF {
+                        for eachs in ChickenClass.breadingSF {
                             if nums == eachs {
                                 self.place = .Bread
-                                ChickenClass.notUsedSF.remove(at: i)
-                                ChickenClass.breadingSF.append(nums)
+                                ChickenClass.breadingSF.remove(at: i)
+                                crit2.removeFirst()
+                                ChickenClass.thawSF.append(nums)
                                 ChickenClass.undoR.removeLast()
-                                time.removeLast()
-                                return
+                                
+                                return crit2
                             }
                             i += 1
                         }
@@ -1041,56 +1051,60 @@ public class ChickenClass:Codable{
             let  nums = ChickenClass.undoR.last!.nums
                 if place == .nones {
                     var i = 0
-                    for eachs in ChickenClass.freezerST {
+                    for eachs in ChickenClass.notUsedST {
                         if nums == eachs {
                             self.place = .nones
-                            ChickenClass.freezerST.remove(at: i)
-                            ChickenClass.notUsedST.append(nums)
+                            ChickenClass.notUsedST.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.freezerST.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Freezer {
                     var i = 0
-                    for eachs in ChickenClass.thawST {
+                    for eachs in ChickenClass.freezerST {
                         if nums == eachs {
                             self.place = .Freezer
-                            ChickenClass.thawST.remove(at: i)
-                            ChickenClass.freezerST.append(nums)
+                            ChickenClass.freezerST.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.thawST.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Thaw {
                     var i = 0
-                    for eachs in ChickenClass.breadingST {
+                    for eachs in ChickenClass.thawST {
                         if nums == eachs {
                             self.place = .Thaw
-                            ChickenClass.breadingST.remove(at: i)
-                            ChickenClass.thawST.append(nums)
+                            ChickenClass.thawST.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.breadingST.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Bread {
                     var i = 0
-                    for eachs in ChickenClass.notUsedST {
+                    for eachs in ChickenClass.breadingST {
                         if nums == eachs {
                             self.place = .Bread
-                            ChickenClass.notUsedST.remove(at: i)
-                            ChickenClass.breadingST.append(nums)
+                            ChickenClass.breadingST.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.notUsedST.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
@@ -1103,56 +1117,60 @@ public class ChickenClass:Codable{
             let  nums = ChickenClass.undoR.last!.nums
                 if place == .nones {
                     var i = 0
-                    for eachs in ChickenClass.freezerGF {
+                    for eachs in ChickenClass.notUsedGF {
                         if nums == eachs {
                             self.place = .nones
-                            ChickenClass.freezerGF.remove(at: i)
-                            ChickenClass.notUsedGF.append(nums)
+                            ChickenClass.notUsedGF.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.freezerGF.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Freezer {
                     var i = 0
-                    for eachs in ChickenClass.thawGF {
+                    for eachs in ChickenClass.freezerGF {
                         if nums == eachs {
                             self.place = .Freezer
-                            ChickenClass.thawGF.remove(at: i)
-                            ChickenClass.freezerGF.append(nums)
+                            ChickenClass.freezerGF.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.thawGF.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Thaw {
                     var i = 0
-                    for eachs in ChickenClass.breadingGF {
+                    for eachs in ChickenClass.thawGF {
                         if nums == eachs {
                             self.place = .Thaw
-                            ChickenClass.breadingGF.remove(at: i)
-                            ChickenClass.thawGF.append(nums)
+                            ChickenClass.thawGF.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.breadingGF.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Bread {
                     var i = 0
-                    for eachs in ChickenClass.notUsedGF {
+                    for eachs in ChickenClass.breadingGF {
                         if nums == eachs {
                             self.place = .Bread
-                            ChickenClass.notUsedGF.remove(at: i)
-                            ChickenClass.breadingGF.append(nums)
+                            ChickenClass.breadingGF.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.notUsedGF.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
@@ -1165,62 +1183,67 @@ public class ChickenClass:Codable{
             let  nums = ChickenClass.undoR.last!.nums
                 if place == .nones {
                     var i = 0
-                    for eachs in ChickenClass.freezerGN {
+                    for eachs in ChickenClass.notUsedGN {
                         if nums == eachs {
                             self.place = .nones
-                            ChickenClass.freezerGN.remove(at: i)
-                            ChickenClass.notUsedGN.append(nums)
+                            ChickenClass.notUsedGN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.freezerGN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Freezer {
                     var i = 0
-                    for eachs in ChickenClass.thawGN {
+                    for eachs in ChickenClass.freezerGN {
                         if nums == eachs {
                             self.place = .Freezer
-                            ChickenClass.thawGN.remove(at: i)
-                            ChickenClass.freezerGN.append(nums)
+                            ChickenClass.freezerGN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.thawGN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Thaw {
                     var i = 0
-                    for eachs in ChickenClass.breadingGN {
+                    for eachs in ChickenClass.thawGN {
                         if nums == eachs {
                             self.place = .Thaw
-                            ChickenClass.breadingGN.remove(at: i)
-                            ChickenClass.thawGN.append(nums)
+                            ChickenClass.thawGN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.breadingGN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                     }
                 }
                 if place == .Bread {
                     var i = 0
-                    for eachs in ChickenClass.notUsedGN {
+                    for eachs in ChickenClass.breadingGN {
                         if nums == eachs {
                             self.place = .Bread
-                            ChickenClass.notUsedGN.remove(at: i)
-                            ChickenClass.breadingGN.append(nums)
+                            ChickenClass.breadingGN.remove(at: i)
+                            crit2.removeFirst()
+                            ChickenClass.notUsedGN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            time.removeLast()
-                            return
+                            
+                            return crit2
                         }
                         i += 1
                         }
                     }
                 }
             }
+        return crit2
         }
     
     func colorChange(button:UIButton,type:ChickenT){
