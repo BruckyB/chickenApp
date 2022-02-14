@@ -859,7 +859,6 @@ public class ChickenClass:Codable{
                             ChickenClass.notUsedR.remove(at: i)
                             crit2.removeFirst()
                             ChickenClass.breadingR.append(nums)
-                            
                             ChickenClass.undoR.removeLast()
                             return crit2
                         }
@@ -870,20 +869,6 @@ public class ChickenClass:Codable{
                     var i = 0
                     for eachs in ChickenClass.freezerR {
                         if nums == eachs {
-                            self.place = .nones
-                            ChickenClass.notUsedR.remove(at: i)
-                            ChickenClass.breadingR.append(nums)
-                            ChickenClass.undoR.removeLast()
-                            return crit2
-                        }
-                        i += 1
-                    }
-                }
-                if place == .Freezer {
-                    var i = 0
-                    for eachs in ChickenClass.freezerR {
-                        if nums == eachs {
-                            print("things")
                             self.place = .Freezer
                             ChickenClass.freezerR.remove(at: i)
                             crit2.removeFirst()
@@ -898,13 +883,11 @@ public class ChickenClass:Codable{
                     var i = 0
                     for eachs in ChickenClass.thawR {
                         if nums == eachs {
-                            print("cars")
                             self.place = .Thaw
                             ChickenClass.thawR.remove(at: i)
                             crit2.removeFirst()
                             ChickenClass.freezerR.append(nums)
                             ChickenClass.undoR.removeLast()
-                            
                             return  crit2
                         }
                         i += 1
@@ -941,22 +924,6 @@ public class ChickenClass:Codable{
                             crit2.removeFirst()
                             ChickenClass.breadingN.append(nums)
                             ChickenClass.undoR.removeLast()
-                            
-                            return crit2
-                        }
-                        i += 1
-                    }
-                }
-                if place == .Freezer {
-                    var i = 0
-                    for eachs in ChickenClass.freezerN {
-                        if nums == eachs {
-                            print("sdfghj")
-                            self.place = .nones
-                            ChickenClass.notUsedN.remove(at: i)
-                            ChickenClass.breadingN.append(nums)
-                            ChickenClass.undoR.removeLast()
-                            
                             return crit2
                         }
                         i += 1

@@ -326,29 +326,47 @@ class ViewController3: UIViewController {
     @IBAction func undo(_ sender : UIButton){
         switch segController.selectedSegmentIndex {
         case 0:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.last!.undoLocation(type: .regs, crit: chicken)
             diffrentColor(types: .regs)
-            passOver()
+                passOver()
+            }
         case 1:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.first!.undoLocation(type: .nugs, crit: chicken)
             diffrentColor(types: .nugs)
             passOver()
+            }
         case 2:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.first!.undoLocation(type: .spicy, crit: chicken)
             diffrentColor(types: .spicy)
-            passOver()
+                passOver()
+            }
         case 3:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.first!.undoLocation(type: .strips, crit: chicken)
             diffrentColor(types: .strips)
             passOver()
+            }
         case 4:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.first!.undoLocation(type: .gFilets, crit: chicken)
             diffrentColor(types: .gFilets)
             passOver()
+            }
         case 5:
+            if chicken.isEmpty {
+            } else {
             chicken = chicken.first!.undoLocation(type: .gNugs, crit: chicken)
             diffrentColor(types: .gNugs)
             passOver()
+            }
         default:
             return
             }
@@ -509,7 +527,7 @@ class ViewController3: UIViewController {
         print(chicken)
         print(ChickenClass.undoR)
         let encoder = JSONEncoder()
-        chicken.removeAll()
+        //chicken.removeAll()
         if let encoded = try? encoder.encode(chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }
