@@ -142,10 +142,6 @@ class ViewController3: UIViewController {
             }
         }
         segController.selectedSegmentIndex = -1
-        print(ChickenClass.freezerR)
-        print(ChickenClass.thawR)
-        print(ChickenClass.breadingR)
-        print(ChickenClass.notUsedR)
     }
     
     @objc func update() {
@@ -156,7 +152,6 @@ class ViewController3: UIViewController {
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
-        passOver()
         }
     
     func buttonThing(sender:UIButton,int:Int){
@@ -524,8 +519,6 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func saveOut(_ sender: Any) {
-        print(chicken)
-        print(ChickenClass.undoR)
         let encoder = JSONEncoder()
         //chicken.removeAll()
         if let encoded = try? encoder.encode(chicken) {

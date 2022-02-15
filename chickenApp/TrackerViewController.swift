@@ -30,21 +30,23 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(TrackerViewController.chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA2")
         }
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        while TrackerViewController.chicken.count > 100 {
+            TrackerViewController.chicken.removeLast()
+        }
         return TrackerViewController.chicken.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOut.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
-        let date = TrackerViewController.chicken[indexPath.row].time.last
+        let date = TrackerViewController.chicken[indexPath.row].time.first
         place = TrackerViewController.chicken[indexPath.row].place
         type = TrackerViewController.chicken[indexPath.row].type
         let hour = calendar.component(.hour, from: date!)
