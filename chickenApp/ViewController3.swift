@@ -335,35 +335,35 @@ class ViewController3: UIViewController {
         case 1:
             if chicken.isEmpty {
             } else {
-            chicken = chicken.first!.undoLocation(type: .nugs, crit: chicken)
+            chicken = chicken.last!.undoLocation(type: .nugs, crit: chicken)
             diffrentColor(types: .nugs)
             passOver()
             }
         case 2:
             if chicken.isEmpty {
             } else {
-            chicken = chicken.first!.undoLocation(type: .spicy, crit: chicken)
+            chicken = chicken.last!.undoLocation(type: .spicy, crit: chicken)
             diffrentColor(types: .spicy)
                 passOver()
             }
         case 3:
             if chicken.isEmpty {
             } else {
-            chicken = chicken.first!.undoLocation(type: .strips, crit: chicken)
+            chicken = chicken.last!.undoLocation(type: .strips, crit: chicken)
             diffrentColor(types: .strips)
             passOver()
             }
         case 4:
             if chicken.isEmpty {
             } else {
-            chicken = chicken.first!.undoLocation(type: .gFilets, crit: chicken)
+            chicken = chicken.last!.undoLocation(type: .gFilets, crit: chicken)
             diffrentColor(types: .gFilets)
             passOver()
             }
         case 5:
             if chicken.isEmpty {
             } else {
-            chicken = chicken.first!.undoLocation(type: .gNugs, crit: chicken)
+            chicken = chicken.last!.undoLocation(type: .gNugs, crit: chicken)
             diffrentColor(types: .gNugs)
             passOver()
             }
