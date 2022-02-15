@@ -330,7 +330,7 @@ class ViewController3: UIViewController {
             } else {
             chicken = chicken.last!.undoLocation(type: .regs, crit: chicken)
             diffrentColor(types: .regs)
-                passOver()
+            passOver()
             }
         case 1:
             if chicken.isEmpty {
