@@ -146,13 +146,8 @@ class ViewController3: UIViewController {
     
     @objc func update() {
         date = Date()
-        let hour = calendar.component(.hour, from: date)
-        let minute = calendar.component(.minute, from: date)
-        let second = calendar.component(.second, from: date)
-        let day = calendar.component(.day, from: date)
-        let month = calendar.component(.month, from: date)
-        let year = calendar.component(.year, from: date)
-        }
+        passOver()
+    }
     
     func buttonThing(sender:UIButton,int:Int){
         if sender.backgroundColor == UIColor.lightGray {
