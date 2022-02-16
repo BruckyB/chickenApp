@@ -736,9 +736,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="998-tD-hQT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="998-tD-hQT">
                                 <rect key="frame" x="132" y="646" width="150" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
@@ -753,14 +752,18 @@
                             <constraint firstItem="n3h-ik-EUp" firstAttribute="top" secondItem="waa-wK-Skg" secondAttribute="bottom" constant="20" id="7Pm-oD-PhH"/>
                             <constraint firstItem="Don-b9-FzX" firstAttribute="top" secondItem="ktm-Ku-gvV" secondAttribute="bottom" constant="18" id="7b6-NL-93M"/>
                             <constraint firstItem="waa-wK-Skg" firstAttribute="top" secondItem="yWz-Iy-f0N" secondAttribute="top" id="CnA-J4-pNe"/>
+                            <constraint firstItem="Don-b9-FzX" firstAttribute="top" secondItem="998-tD-hQT" secondAttribute="bottom" constant="44" id="DbE-ET-rk7"/>
                             <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="centerY" secondItem="aN8-O9-oaC" secondAttribute="centerY" id="Gan-K2-dbX"/>
                             <constraint firstItem="fvR-e2-1Gp" firstAttribute="top" secondItem="Don-b9-FzX" secondAttribute="bottom" constant="18" id="JyU-nz-Jmp"/>
+                            <constraint firstItem="998-tD-hQT" firstAttribute="top" secondItem="2Qi-HZ-X6Z" secondAttribute="bottom" constant="20.5" id="Mlg-Ys-hui"/>
                             <constraint firstItem="n3h-ik-EUp" firstAttribute="centerX" secondItem="aN8-O9-oaC" secondAttribute="centerX" id="Qvl-YU-Q8Y"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="waa-wK-Skg" secondAttribute="trailing" constant="24" id="Ru7-It-cgI"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="fvR-e2-1Gp" secondAttribute="trailing" constant="46" id="Vyu-Bp-QwS"/>
                             <constraint firstItem="EYs-1D-ken" firstAttribute="bottom" secondItem="yWz-Iy-f0N" secondAttribute="bottom" id="Xvm-Ho-M9L"/>
+                            <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="998-tD-hQT" secondAttribute="trailing" constant="132" id="fUu-wF-qLU"/>
                             <constraint firstItem="EYs-1D-ken" firstAttribute="top" secondItem="fvR-e2-1Gp" secondAttribute="bottom" constant="18" id="imN-Er-K7y"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="EYs-1D-ken" secondAttribute="trailing" constant="46" id="oDx-qN-tdO"/>
+                            <constraint firstItem="998-tD-hQT" firstAttribute="leading" secondItem="yWz-Iy-f0N" secondAttribute="leading" constant="132" id="qSf-Yy-Yav"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="Don-b9-FzX" secondAttribute="trailing" constant="46" id="t5s-rx-Bn6"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="ktm-Ku-gvV" secondAttribute="trailing" constant="46" id="zXk-NS-LkQ"/>
                         </constraints>
