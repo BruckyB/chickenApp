@@ -28,6 +28,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
             TrackerViewController.chicken = decoded
             }
         }
+        print("gfdjshkaljhjvfsk")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
