@@ -21,23 +21,6 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-            if let item  = UserDefaults.standard.data(forKey: "SDATA2"){
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([ChickenClass].self, from: item){
-            TrackerViewController.chicken = decoded
-            }
-        }
-        print("gfdjshkaljhjvfsk")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(TrackerViewController.chicken) {
-                UserDefaults.standard.set(encoded, forKey: "SDATA2")
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         while TrackerViewController.chicken.count > 100 {
             TrackerViewController.chicken.removeLast()

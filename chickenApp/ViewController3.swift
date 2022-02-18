@@ -334,7 +334,7 @@ class ViewController3: UIViewController {
             } else {
             chicken = chicken.last!.undoLocation(type: .spicy, crit: chicken)
             diffrentColor(types: .spicy)
-                passOver()
+            passOver()
             }
         case 3:
             if chicken.isEmpty {
@@ -515,6 +515,7 @@ class ViewController3: UIViewController {
     
     @IBAction func saveOut(_ sender: Any) {
         let encoder = JSONEncoder()
+        ChickenClass.undoR.removeAll()
         //chicken.removeAll()
         if let encoded = try? encoder.encode(chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
