@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let item  = UserDefaults.standard.data(forKey: "SDATA"){
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([ChickenClass].self, from: item){
+                TrackerViewController.chicken = decoded
+            }
+        }
+    }
 
     
     @IBAction func tButton(_ sender: Any) {
