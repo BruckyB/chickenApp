@@ -32,6 +32,33 @@ class HelpScreen: UIViewController {
     
     @IBAction func clearButton(_ sender: Any) {
         present(alert, animated: true, completion: nil)
+        print(ChickenClass.freezerR)
+        print(ChickenClass.freezerN)
+        print(ChickenClass.freezerSF)
+        print(ChickenClass.freezerST)
+        print(ChickenClass.freezerGF)
+        print(ChickenClass.freezerGN)
+        
+        print(ChickenClass.thawR)
+        print(ChickenClass.thawN)
+        print(ChickenClass.thawSF)
+        print(ChickenClass.thawST)
+        print(ChickenClass.thawGF)
+        print(ChickenClass.thawN)
+        
+        print(ChickenClass.breadingR)
+        print(ChickenClass.breadingN)
+        print(ChickenClass.breadingSF)
+        print(ChickenClass.breadingST)
+        print(ChickenClass.breadingGF)
+        print(ChickenClass.breadingGN)
+        
+        print(ChickenClass.notUsedR)
+        print(ChickenClass.notUsedN)
+        print(ChickenClass.notUsedSF)
+        print(ChickenClass.notUsedST)
+        print(ChickenClass.notUsedGF)
+        print(ChickenClass.notUsedGN)
     }
     
 }
