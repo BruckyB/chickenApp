@@ -10,7 +10,7 @@ import CloudKit
 
 class ViewController3: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
-    var chicken:[ChickenClass] = []
+    static var chicken:[ChickenClass] = []
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
     var date = Date()
@@ -67,8 +67,12 @@ class ViewController3: UIViewController {
     @IBOutlet weak var b48: UIButton!
     @IBOutlet weak var b49: UIButton!
     @IBOutlet weak var b50: UIButton!
+    var alert = UIAlertController(title: "Saved", message: "Items Saved", preferredStyle: .alert)
     override func viewDidLoad() {
         super.viewDidLoad()
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
+            print("balls")
+        }))
         buttonArray.append(b1)
         buttonArray.append(b2)
         buttonArray.append(b3)
@@ -122,7 +126,7 @@ class ViewController3: UIViewController {
     }
     
     func passOver() {
-        TrackerViewController.chicken = self.chicken
+        TrackerViewController.chicken = ViewController3.self.chicken
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,7 +142,7 @@ class ViewController3: UIViewController {
         if let item  = UserDefaults.standard.data(forKey: "SDATA"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([ChickenClass].self, from: item){
-                chicken = decoded
+                ViewController3.chicken = decoded
             }
         }
         segController.selectedSegmentIndex = -1
@@ -154,25 +158,25 @@ class ViewController3: UIViewController {
             sender.backgroundColor = UIColor.cyan
             switch segController.selectedSegmentIndex {
             case 0:
-                chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             case 1:
-                chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 2:
-                chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                
             case 3:
-                chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 4:
-                chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             case 5:
-                chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             default:
                 return
@@ -180,32 +184,32 @@ class ViewController3: UIViewController {
         }
         else if sender.backgroundColor == UIColor.cyan {
             sender.backgroundColor = UIColor.yellow
-            for chickens in chicken {
+            for chickens in ViewController3.chicken {
                 if chickens.numberChick == int{
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        chicken.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     
                     case 1:
-                        chicken.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                         
                     case 2:
-                        chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                     case 3:
-                        chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        chicken.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        chicken.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -218,27 +222,27 @@ class ViewController3: UIViewController {
             sender.backgroundColor = UIColor.green
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        chicken.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 1:
-                        chicken.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
-                        chicken.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
-                        chicken.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        chicken.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        chicken.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -249,27 +253,27 @@ class ViewController3: UIViewController {
             sender.backgroundColor = UIColor.lightGray
                     switch segController.selectedSegmentIndex {
                     case 0:
-                        chicken.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                        
                     case 1:
-                        chicken.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
-                        chicken.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
-                        chicken.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
-                        chicken.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
-                        chicken.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -280,10 +284,10 @@ class ViewController3: UIViewController {
     
     func diffrentColor(types:ChickenT){
         for blah in buttonArray {
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
                 blah.backgroundColor = UIColor.lightGray
             } else {
-                chicken.first!.colorChange(button: blah, type: types)
+                ViewController3.chicken.first!.colorChange(button: blah, type: types)
             }
         }
     }
@@ -316,44 +320,44 @@ class ViewController3: UIViewController {
     @IBAction func undo(_ sender : UIButton){
         switch segController.selectedSegmentIndex {
         case 0:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .regs, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .regs, crit: ViewController3.chicken)
             diffrentColor(types: .regs)
             passOver()
             }
         case 1:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .nugs, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .nugs, crit: ViewController3.chicken)
             diffrentColor(types: .nugs)
             passOver()
             }
         case 2:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .spicy, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .spicy, crit: ViewController3.chicken)
             diffrentColor(types: .spicy)
             passOver()
             }
         case 3:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .strips, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .strips, crit: ViewController3.chicken)
             diffrentColor(types: .strips)
             passOver()
             }
         case 4:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .gFilets, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .gFilets, crit: ViewController3.chicken)
             diffrentColor(types: .gFilets)
             passOver()
             }
         case 5:
-            if chicken.isEmpty {
+            if ViewController3.chicken.isEmpty {
             } else {
-            chicken = chicken.last!.undoLocation(type: .gNugs, crit: chicken)
+                ViewController3.chicken = ViewController3.chicken.last!.undoLocation(type: .gNugs, crit: ViewController3.chicken)
             diffrentColor(types: .gNugs)
             passOver()
             }
@@ -517,9 +521,10 @@ class ViewController3: UIViewController {
         let encoder = JSONEncoder()
         ChickenClass.undoR.removeAll()
         //chicken.removeAll()
-        if let encoded = try? encoder.encode(chicken) {
+        if let encoded = try? encoder.encode(ViewController3.chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }
+        present(alert, animated: true, completion: nil)
     }
     
     
