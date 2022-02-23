@@ -24,7 +24,7 @@ class HelpScreen: UIViewController {
                     UserDefaults.standard.set(encoded, forKey: "SDATA")
             }
 
-            
+            print("blah")
             print("oh yea")
         }))
 
