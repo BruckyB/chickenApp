@@ -14,5 +14,6 @@ class CustomCell:UITableViewCell {
     @IBOutlet weak var timeOut: UILabel!
     @IBOutlet weak var numOut: UILabel!
     @IBOutlet weak var pathOut: UILabel!
+    @IBOutlet weak var initOut: UILabel!
     
 }

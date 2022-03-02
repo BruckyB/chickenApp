@@ -14,6 +14,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     let calendar = Calendar.current
     var place:placeT = .nones
     var type:ChickenT = .regs
+    var initials = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOut.delegate = self

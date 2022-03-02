@@ -67,12 +67,24 @@ class ViewController3: UIViewController {
     @IBOutlet weak var b48: UIButton!
     @IBOutlet weak var b49: UIButton!
     @IBOutlet weak var b50: UIButton!
+    @IBOutlet weak var iniField: UITextField!
+    var initials = ""
+    var alert2 = UIAlertController(title: "Error", message: "Initials Missing", preferredStyle: .alert)
     var alert = UIAlertController(title: "Saved", message: "Items Saved", preferredStyle: .alert)
     override func viewDidLoad() {
         super.viewDidLoad()
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
             print("balls")
-        }))
+            }))
+        
+        alert2.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
+            print("balls")
+            }))
+        
+        
+        
+        
+        
         buttonArray.append(b1)
         buttonArray.append(b2)
         buttonArray.append(b3)
@@ -281,6 +293,13 @@ class ViewController3: UIViewController {
                 }
         }
     }
+    
+    @IBAction func redoButt(_ sender: UIButton) {
+    }
+    
+    
+    
+    
     
     func diffrentColor(types:ChickenT){
         for blah in buttonArray {
@@ -517,14 +536,25 @@ class ViewController3: UIViewController {
         buttonThing(sender: sender,int: 50)
     }
     
+    @objc private func showAlert() {
+        
+        
+    }
+    
     @IBAction func saveOut(_ sender: Any) {
+        if iniField.text == nil {
+            present(alert2, animated: true, completion: nil)
+        } else {
+            initials = iniField.text!
         let encoder = JSONEncoder()
         ChickenClass.undoR.removeAll()
         //chicken.removeAll()
         if let encoded = try? encoder.encode(ViewController3.chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }
+        
         present(alert, animated: true, completion: nil)
+        }
     }
     
     
