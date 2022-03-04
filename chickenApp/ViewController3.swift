@@ -11,6 +11,7 @@ import CloudKit
 class ViewController3: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     static var chicken:[ChickenClass] = []
+    static var chicken2:[ChickenClass] = []
     var buttonArray:[UIButton] = []
     var chickenType:ChickenT = .regs
     var date = Date()
@@ -68,7 +69,7 @@ class ViewController3: UIViewController {
     @IBOutlet weak var b49: UIButton!
     @IBOutlet weak var b50: UIButton!
     @IBOutlet weak var iniField: UITextField!
-    var initials = ""
+    static var initials = ""
     var alert2 = UIAlertController(title: "Error", message: "Initials Missing", preferredStyle: .alert)
     var alert = UIAlertController(title: "Saved", message: "Items Saved", preferredStyle: .alert)
     override func viewDidLoad() {
@@ -171,24 +172,30 @@ class ViewController3: UIViewController {
             switch segController.selectedSegmentIndex {
             case 0:
                 ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .regs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             case 1:
                 ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .nugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 2:
                 ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .spicy, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                
             case 3:
                 ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .strips, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
                 
             case 4:
                 ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .gFilets, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             case 5:
                 ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date), at: 0)
+                ViewController3.chicken2.insert(ChickenClass(type: .gNugs, place: .Freezer, num: int, time: date), at: 0)
                 passOver()
             default:
                 return
@@ -201,27 +208,33 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .regs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     
                     case 1:
                         ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .nugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                         
                     case 2:
                         ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .spicy, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                     case 3:
                         ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .strips, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gFilets, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gNugs, place: .Thaw, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -235,26 +248,32 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         ViewController3.chicken.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .regs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 1:
                         ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .nugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
                         ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .spicy, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
                         ViewController3.chicken.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .strips, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gFilets, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gNugs, place: .Bread, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -266,26 +285,32 @@ class ViewController3: UIViewController {
                     switch segController.selectedSegmentIndex {
                     case 0:
                         ViewController3.chicken.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .regs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                        
                     case 1:
                         ViewController3.chicken.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .nugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 2:
                         ViewController3.chicken.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .spicy, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 3:
                         ViewController3.chicken.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .strips, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 4:
                         ViewController3.chicken.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gFilets, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     case 5:
                         ViewController3.chicken.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
+                        ViewController3.chicken2.insert(ChickenClass(type: .gNugs, place: .nones, num: int, time: date), at: 0)
                         passOver()
                         
                     default:
@@ -541,19 +566,43 @@ class ViewController3: UIViewController {
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        iniField.resignFirstResponder()
+        return true
+    }
+    
+    
+    
     @IBAction func saveOut(_ sender: Any) {
-        if iniField.text == nil {
+        if iniField.text == nil || iniField.text == "" {
             present(alert2, animated: true, completion: nil)
         } else {
-            initials = iniField.text!
+            ViewController3.initials = iniField.text!
+            for each in ViewController3.chicken2 {
+                each.changeinit(I: ViewController3.initials)
+                print(ViewController3.chicken.count)
+                print(ViewController3.chicken2.count)
+            }
+            var i = ViewController3.chicken2.count-1
+            print(i)
+            while i >= 0 {
+                ViewController3.chicken.remove(at: i)
+                ViewController3.chicken.insert(ViewController3.chicken2[i], at: i)
+                
+                
+                
+                i = i-1
+            }
+            ViewController3.chicken2.removeAll()
         let encoder = JSONEncoder()
         ChickenClass.undoR.removeAll()
         //chicken.removeAll()
         if let encoded = try? encoder.encode(ViewController3.chicken) {
                 UserDefaults.standard.set(encoded, forKey: "SDATA")
         }
-        
+            
         present(alert, animated: true, completion: nil)
+        
         }
     }
     

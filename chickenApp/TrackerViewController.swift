@@ -14,7 +14,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
     let calendar = Calendar.current
     var place:placeT = .nones
     var type:ChickenT = .regs
-    var initials = ""
+    var ini = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOut.delegate = self
@@ -34,6 +34,7 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let date = TrackerViewController.chicken[indexPath.row].time.first
         place = TrackerViewController.chicken[indexPath.row].place
         type = TrackerViewController.chicken[indexPath.row].type
+        ini = TrackerViewController.chicken[indexPath.row].initials
         let hour = calendar.component(.hour, from: date!)
         let minute = calendar.component(.minute, from: date!)
         let second = calendar.component(.second, from: date!)
@@ -86,6 +87,10 @@ class TrackerViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 cell.numOut.text = "GFilets Case \(TrackerViewController.chicken[indexPath.row].numberChick)"
         }
         cell.dateOut.text = " \(month)/\(day)/\(year)"
+        
+        print(ini)
+        print("poop")
+        cell.initOut.text = "\(ini)"
         return cell
     }
 

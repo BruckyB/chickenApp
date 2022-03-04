@@ -84,6 +84,7 @@ public class ChickenClass:Codable{
     var place:placeT
     var numberChick:Int
     var time:[Date] = []
+    var initials = ""
     static var freezerR:[Int] = []
     static var freezerN:[Int] = []
     static var freezerSF:[Int] = []
@@ -109,6 +110,7 @@ public class ChickenClass:Codable{
     static var notUsedGF:[Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
     static var notUsedGN:[Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
     static var undoR:[(place:placeT,nums:Int)] = []
+    
     
     
     init(type:ChickenT,place:placeT,num:Int,time:Date) {
@@ -396,6 +398,9 @@ public class ChickenClass:Codable{
         }
     }
     
+    
+    
+    
     public required init(from decoder: Decoder) throws {
         let decoded = try decoder.container(keyedBy: codingKeys.self)
         ChickenClass.notUsedR = try decoded.decode([Int].self, forKey: .NUR)
@@ -458,6 +463,11 @@ public class ChickenClass:Codable{
         try encoded.encode(type, forKey: .type)
         try encoded.encode(numberChick, forKey: .num)
         try encoded.encode(time, forKey: .times)
+    }
+    
+    func changeinit(I:String) {
+        self.initials = I
+        print(self.initials)
     }
     
     func changeLocation(place:placeT,num:Int,type:ChickenT,nTime:Date){

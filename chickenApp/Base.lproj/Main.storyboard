@@ -676,20 +676,9 @@
                                     <constraint firstAttribute="height" constant="355" id="gfu-F8-91h"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waa-wK-Skg">
-                                <rect key="frame" x="335" y="88" width="59" height="31.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="waa-wK-Skg" secondAttribute="height" multiplier="15:8" id="NlQ-mQ-Kyt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Undo"/>
-                                <connections>
-                                    <action selector="undo:" destination="SD3-5B-G0c" eventType="touchUpInside" id="I36-4u-emX"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thaw Cabinet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Don-b9-FzX">
                                 <rect key="frame" x="263" y="763" width="105" height="21"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="iNh-mc-tze"/>
                                     <constraint firstAttribute="width" constant="105" id="iZh-sr-HUA"/>
@@ -700,7 +689,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breading Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-e2-1Gp">
                                 <rect key="frame" x="254.5" y="802" width="113.5" height="21"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" red="0.45763701200000001" green="0.98651701209999998" blue="0.29781895879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GDh-1R-zkb"/>
                                     <constraint firstAttribute="width" constant="113.5" id="doT-eO-7Nw"/>
@@ -752,7 +741,7 @@
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freezer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktm-Ku-gvV">
                                 <rect key="frame" x="307.5" y="724" width="60" height="21"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="u5z-iB-yBj"/>
                                     <constraint firstAttribute="height" constant="21" id="y6W-eb-bP1"/>
@@ -771,15 +760,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMW-6D-7gH">
-                                <rect key="frame" x="336" y="127" width="58" height="31"/>
+                                <rect key="frame" x="317" y="88" width="77" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="58" id="gAi-zw-hQx"/>
-                                    <constraint firstAttribute="height" constant="31" id="jHb-a5-E0f"/>
+                                    <constraint firstAttribute="height" constant="32" id="LDJ-IA-VI7"/>
+                                    <constraint firstAttribute="width" constant="77" id="qQ2-OF-Ie7"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Redo"/>
                                 <connections>
-                                    <action selector="redoButt:" destination="SD3-5B-G0c" eventType="touchUpInside" id="RPM-AU-zlR"/>
+                                    <action selector="redoButt:" destination="SD3-5B-G0c" eventType="touchUpInside" id="BVL-BL-9gJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waa-wK-Skg">
+                                <rect key="frame" x="232" y="88" width="77" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Sdt-IJ-8ks"/>
+                                    <constraint firstAttribute="width" constant="77" id="YC3-KX-ldc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Undo"/>
+                                <connections>
+                                    <action selector="undo:" destination="SD3-5B-G0c" eventType="touchUpInside" id="I36-4u-emX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -788,23 +789,23 @@
                         <constraints>
                             <constraint firstItem="998-tD-hQT" firstAttribute="centerX" secondItem="aN8-O9-oaC" secondAttribute="centerX" id="0ln-aS-Tei"/>
                             <constraint firstItem="998-tD-hQT" firstAttribute="top" secondItem="2Qi-HZ-X6Z" secondAttribute="bottom" constant="7.5" id="0xi-du-1kQ"/>
+                            <constraint firstItem="SMW-6D-7gH" firstAttribute="top" secondItem="yWz-Iy-f0N" secondAttribute="top" id="7cA-lJ-TXf"/>
                             <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="top" secondItem="n3h-ik-EUp" secondAttribute="bottom" constant="27.5" id="8MK-g4-4zM"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="Don-b9-FzX" secondAttribute="trailing" constant="46" id="A5k-rW-6qz"/>
-                            <constraint firstItem="waa-wK-Skg" firstAttribute="top" secondItem="yWz-Iy-f0N" secondAttribute="top" id="NHe-my-Mib"/>
+                            <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="SMW-6D-7gH" secondAttribute="trailing" constant="20" id="C1k-Ll-xfP"/>
                             <constraint firstItem="EYs-1D-ken" firstAttribute="top" secondItem="fvR-e2-1Gp" secondAttribute="bottom" constant="18" id="NaS-w2-CLM"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="EYs-1D-ken" secondAttribute="trailing" constant="46" id="O6b-WH-T12"/>
                             <constraint firstItem="xZG-n3-dUd" firstAttribute="bottom" secondItem="yWz-Iy-f0N" secondAttribute="bottom" id="R2W-B1-jwm"/>
+                            <constraint firstItem="SMW-6D-7gH" firstAttribute="leading" secondItem="waa-wK-Skg" secondAttribute="trailing" constant="8" symbolic="YES" id="Rd8-Pa-c1F"/>
                             <constraint firstItem="Don-b9-FzX" firstAttribute="top" secondItem="ktm-Ku-gvV" secondAttribute="bottom" constant="18" id="TEf-HK-hEl"/>
+                            <constraint firstItem="waa-wK-Skg" firstAttribute="top" secondItem="yWz-Iy-f0N" secondAttribute="top" id="WAc-QT-9dT"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="fvR-e2-1Gp" secondAttribute="trailing" constant="46" id="Ymu-0y-hW7"/>
                             <constraint firstItem="xZG-n3-dUd" firstAttribute="leading" secondItem="yWz-Iy-f0N" secondAttribute="leading" constant="20" id="g6p-H1-wJ9"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="bottom" secondItem="EYs-1D-ken" secondAttribute="bottom" constant="0.5" id="hKU-gE-YZA"/>
-                            <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="waa-wK-Skg" secondAttribute="trailing" constant="20" id="iKL-Tk-yn7"/>
                             <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="ktm-Ku-gvV" secondAttribute="trailing" constant="46.5" id="kKY-aQ-Gpk"/>
                             <constraint firstItem="n3h-ik-EUp" firstAttribute="centerX" secondItem="aN8-O9-oaC" secondAttribute="centerX" id="kpI-J8-lFS"/>
                             <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="centerX" secondItem="aN8-O9-oaC" secondAttribute="centerX" id="lZk-1S-ckF"/>
-                            <constraint firstItem="yWz-Iy-f0N" firstAttribute="trailing" secondItem="SMW-6D-7gH" secondAttribute="trailing" constant="20" id="oY6-yF-puX"/>
                             <constraint firstItem="2Qi-HZ-X6Z" firstAttribute="centerY" secondItem="aN8-O9-oaC" secondAttribute="centerY" id="rlQ-BI-eFk"/>
-                            <constraint firstItem="SMW-6D-7gH" firstAttribute="top" secondItem="waa-wK-Skg" secondAttribute="bottom" constant="7.5" id="sDa-BA-Cpe"/>
                             <constraint firstItem="fvR-e2-1Gp" firstAttribute="top" secondItem="Don-b9-FzX" secondAttribute="bottom" constant="18" id="xgv-oS-AON"/>
                         </constraints>
                     </view>
@@ -938,15 +939,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
