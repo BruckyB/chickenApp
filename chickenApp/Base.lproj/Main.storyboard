@@ -890,8 +890,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srd-fX-7FI">
                                 <rect key="frame" x="123" y="497" width="168" height="73"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="MOn-8k-P7B"/>
-                                    <constraint firstAttribute="width" constant="168" id="iLt-40-xdJ"/>
+                                    <constraint firstAttribute="height" constant="73" id="nsv-GX-jQZ"/>
+                                    <constraint firstAttribute="width" constant="168" id="w8T-NL-jke"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear Tracker"/>
@@ -903,8 +903,8 @@
                         <viewLayoutGuide key="safeArea" id="grJ-bg-0YG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="srd-fX-7FI" firstAttribute="centerY" secondItem="ncL-cq-y6b" secondAttribute="centerY" constant="85.5" id="HQh-ee-cBo"/>
-                            <constraint firstItem="srd-fX-7FI" firstAttribute="centerX" secondItem="ncL-cq-y6b" secondAttribute="centerX" id="gbq-cx-RfN"/>
+                            <constraint firstItem="srd-fX-7FI" firstAttribute="centerY" secondItem="ncL-cq-y6b" secondAttribute="centerY" constant="85.5" id="MD6-Wz-8lz"/>
+                            <constraint firstItem="srd-fX-7FI" firstAttribute="centerX" secondItem="ncL-cq-y6b" secondAttribute="centerX" id="wjw-oO-4aX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jdy-GD-1Ti"/>
